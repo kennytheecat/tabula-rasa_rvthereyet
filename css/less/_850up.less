@@ -1,0 +1,103 @@
+ul.nav-menu {
+	li {
+		a {
+			.font-size(14px);
+		}
+		&:hover ul { 
+			.margin-top(7px);
+		}
+	}
+}
+
+/** Listing Pages
+-------------------------------------------------------------- */
+.listing_reviews{
+	
+	h2 {}
+	article {
+		.column(4);
+		
+		&:first-of-type {
+			.first;
+		}
+		&:nth-of-type(2) {
+			margin: 0 1%;
+		}		
+		&:last-of-type{
+			.last;
+			display: inline;
+		}			
+	}
+}
+
+#basicinfo { 
+	.column(4);
+	.first;
+	.padding-bottom(5px); 
+	
+	h1 {  
+		.margin(0px); 
+	}
+	address {}
+	p {}
+} 
+.ratings_section {
+	.column(4);
+}
+/* Featured Park Section */
+#rvpark_featured_parks { 
+	.column(4);
+	.last;	
+	.padding-bottom(5px);
+	
+	h2 {
+		.margin(0px);
+	}
+	.shadow-left, 
+	.shadow-right {
+		display: none;
+	}	
+}
+
+#rvty_advert {
+	//.wrap;
+	clear: both;
+	.min-height(25px);
+	display: block;
+	
+	h3 {
+		.font-size(20px);
+		.padding(10px, 0);
+		text-align: center;
+	}
+}
+.description_or_nearby,
+#details_wrap {
+	margin-top: 0;
+}
+
+/******************************************************************
+BLOG STYLES
+******************************************************************/
+.blog, .single-post, .archive, .search  {
+	.blog404,
+	.content-area {
+		.column(7);
+		.first;
+	}
+	.widget-area {
+		.column(5);
+		.last;
+	}
+}
+.single-post {
+	#fsb-social-bar {
+		.fsb-title {
+			.padding-left(0px) !important;
+		}
+		.fsb-share-twitter {
+			display: inline;
+		}
+		.fsb-share-pinterest {}		
+	}
+}

@@ -1,0 +1,84 @@
+ul.nav-menu {
+	margin-left: auto;
+	
+	li {
+		.margin-right(25px);
+		
+		a {}
+	}
+}
+
+/** Listing Pages
+-------------------------------------------------------------- */
+.blog, .archive, .blog404, .search {
+	.entry-summary {	
+		.read-more {
+			.width(420px);
+		}	
+	}
+}
+
+#rvpark_featured_parks { 
+	.shadow-left, 
+	.shadow-right {
+		display: inline;
+	}	
+}
+#photo_gallery_or_ad {
+	.column(4);
+	.first;
+	clear: both;
+}
+/**  MAP  **/
+.map_wrapper {
+	.column(8);
+	.last;
+}
+
+/******************************************************************
+BLOG STYLES
+******************************************************************/
+.blog, .single-post, .archive, .search  {
+	.blog404,
+	.content-area {
+		.column(8);
+		.first;
+		
+		.entry-thumbnail {
+			.column(4.5);
+			.first;	
+			.margin-bottom(5px);			
+			
+			img {
+				margin: 0;
+			}
+		}
+		.entry {
+			.column(7.5);
+			.last;
+			.max-height(104px);
+		}
+		.read-more {
+			.column(7.5);
+			.last;
+			clear: none;
+		}		
+	}
+	.widget-area {
+		.column(4);
+		.last;
+	}
+}
+.single-post {
+	#fsb-social-bar {
+		.fsb-title {
+			.padding-left(60px) !important;
+		}
+		.fsb-share-twitter {
+			display: inline;
+		}
+		.fsb-share-pinterest {
+			display: inline;
+		}		
+	}
+}

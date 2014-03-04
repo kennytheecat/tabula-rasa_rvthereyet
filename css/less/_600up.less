@@ -1,0 +1,436 @@
+/******************************************************************
+HEADER & NAVIGATION
+******************************************************************/
+
+/** Site Header
+-------------------------------------------------------------- */
+/** 
+header#masthead .site-header
+	.inner-header
+		.site-branding
+			.logo
+				a
+					img
+		.big_banner
+			.header-login
+				a
+		nav#site-navigation .main-navigation	
+-------------------------------------------------------------- */
+.wrap {
+	.max-width(1000px);
+	margin: 0 auto 0;
+}
+.site-header {
+	background: @sec-bg;
+	box-shadow: 1px 1px 1px black;
+	overflow: hidden;
+
+	.inner-header {}
+}
+.site-branding {
+	.wrap;
+	.padding(5px, 0); 
+	overflow: hidden;
+	display: block;
+
+	.logo {
+		.column(6);
+		.first;
+		//.height(100px);
+		
+		div {
+		.logosprite;
+		padding-top: 20.83%; 
+		width: 100%;
+		.height(100px);		
+			a { 
+				&:hover {}
+				img {
+					max-width: none;;
+				}
+			}	
+		}
+	}
+	#big_banner {
+		.column(6);
+		.last;
+		float: right;
+		.margin-top(11px);
+		
+		.header-login {
+			float: right;
+
+			a {
+				color: @white;
+				text-decoration: underline;
+				.padding-right(5px);
+			}
+		}
+	}
+}
+
+/** Navigation
+-------------------------------------------------------------- */
+/*
+header#masthead .site-header
+	.inner-header
+		.site-branding
+		nav#site-naviagtion .main-navigation
+			.logo
+			.menu-toggle
+			.asssitive-text
+			ul .nav-menu
+				li.page-item
+					a
+-------------------------------------------------------------- */
+.main-navigation {
+	background: url(../images/nav_pattern_trans.png) repeat #b96;
+	.height(40px);
+	box-shadow: 0 0px 20px 0px black;
+	
+	.logo { 
+		display: none;
+		
+		a {
+			img {}
+		}
+	}
+	.menu-toggle {
+		display: none;
+	} 
+	.assistive-text {}	
+} /* end .main-navigation */
+ul.nav-menu {
+	display: block !important;
+	text-align: left;
+	.wrap;
+	padding: 0;
+	.margin-left(10px);
+	
+	li {
+		margin: 0;
+		/*.margin-right(25px);*/
+		.margin-right(10px);
+		display: inline-block;
+		.padding-bottom(10px);
+		
+		&.menu-item-94350,
+		&.menu-item-94363 {
+			display: none;
+		}
+		
+		a {
+			border-bottom: 0;
+			color: @link-color;
+			text-transform: uppercase;
+			white-space: nowrap;
+			display: inline-block;
+			font-family: @serif;
+			font-weight: 700;
+			.font-size(12px);
+			text-decoration: none;
+			.padding-top(10px);
+			
+			&:hover, &:focus { 
+				color: @link-hover; 
+			}					
+		}
+		&:first-child {}
+		&:last-child {}
+		
+		/** Second Level **/
+		ul.sub-menu,
+		ul.children {
+			display: none;
+			
+			li {
+				margin: 0;
+				padding: 0;
+				.height(40px);
+				display: block;
+				
+				a {
+					margin: 0;
+					.padding(10px);
+					
+					&:hover,
+					&:focus {
+					}
+					&:link {}
+				}
+				&:first-child {}
+				&:last-child {}
+			} //end .sub-menu li 
+		} //end .sub-menu ul 
+		&:hover ul { 
+			position: absolute;
+			display: inline-table;
+			background: url(../images/nav_pattern_trans.png) repeat #b96;
+			.margin-top(10px);
+			padding: 0;
+		}
+	} /* end .nav-menu li */
+	/* highlight current page */
+	li.current-menu-item,
+	li.current_page_item,
+	li.current_page_ancestor {
+		a {}
+	}  /* end current highlighters */			
+} /* end .nav-menu ul */
+
+.starter_blogs {
+	/*width: 43%;
+	display: inline;
+	float: left;
+	margin-right: 2%;
+	*/
+	clear: both;
+	.column(5);
+	.first;
+	
+	h2 {}
+	img {
+		display: block;
+		margin: 0 auto 0;
+		.margin-bottom(5px);
+		float: none;
+	} 
+}
+.starter_reviews {
+	.column(7);
+	.last;
+	
+	h2 {
+		.green-button;
+		.font-size(20px);	
+		text-shadow: none;
+	}
+	.comment_wrap {
+		.margin-top(20px);
+
+		.comment-meta {
+			.comment_col1 {
+				width: 100%;
+			}
+		}
+	}	
+}
+
+/** Listing Pages
+-------------------------------------------------------------- */
+.list {
+	.column(4);
+	.first;
+	.min-height(100px);
+	margin: 0;
+	
+	h2 {}
+	ul {
+		.height(507px);
+		
+		li {
+			
+			h3 {
+				background: @sec-bg;
+				.border-radius(5px);
+			}
+		}
+	}	
+}
+.listing_map {
+	.column(8);
+	.min-height(100px);
+	.margin-bottom(20px);
+
+	& > p {}
+	.map_wrapper {
+		width: 100%;
+		
+		#map {
+			.height(500px);
+		}	
+	}
+}
+
+/** Single Pages
+*************************************************************/
+/** Listing Navs **/
+.listing_nav a { 
+	display: inline;
+}
+#basicinfo { 
+	.column(6);
+	.first;
+	.padding-bottom(5px); 
+	
+	h1 {}
+	address {}
+	p {}
+}
+.ratings_mobile {
+	display: none;
+}
+.ratings_section {
+	.column(6);
+	.last;
+	text-align: center;
+	
+	#ratings { 
+		display: inline-block; 
+		
+		img {
+			box-shadow: none;
+			.margin(0px);
+		}
+		.rating_star {
+			.width(45px);
+		}
+		.not_rated {
+			.width(225px);
+			.not_rated_large {
+			}
+		}
+	}
+	.review_button { 
+		display: block;
+		.reviews_button_sprite;
+		.main-button;
+		
+		a { 
+			.padding-top(10px);
+			font-family: 'Open Sans Condensed';
+			text-decoration: none;
+			font-weight: 700;
+			color: green;
+			display: block;
+			.font-size(16px);
+		}
+	}
+	#facebook_badge {
+		display: block;
+	}
+}
+/** Floating Social Bar **/
+.float_share {	
+	#fsb-social-bar {
+		.fsb-title {
+			.padding-left(50px); 
+		}	
+		.fsb-share-pinterest {
+			display: inline;
+		}	
+	}
+}
+
+/* Photo Gallery or Ad*/
+
+#photo_gallery_or_ad {
+	float: left;
+	border: 2px solid #DDD;
+	background: @white;
+	text-align: center;
+	.column(6.5);
+	.first;
+	clear: both;
+	.max-height(315px);
+}
+
+/** Photo Gallery **/
+.photo_gallery {
+	.portfolio-slideshow[style] {
+		width: 100% !important;
+		.margin-top(2px);
+	}
+	.slideshow-wrapper .pager img {
+		margin-right: 8px!important;
+	}
+	.pscarousel {
+		.margin(0 auto);
+		.margin-top(-10px);
+	}	
+}
+/** Ad Area  **/
+.ad_area_aside {
+	display: block;
+	.padding-top(5px);
+	
+	iframe {
+		height: 250px;
+		margin: 0;
+		padding: 0;
+	}
+}
+/**  MAP  **/
+.map_wrapper {
+	.column(5.5);
+	.last;
+}
+#map { 
+	border: solid 2px #DDD; 
+	width: 100%;
+	
+	div {
+		box-sizing: content-box;
+	}
+}
+
+/** Single Pages for RV Dumps
+--------------------------------------------------------------*/
+.single-rvdumps {
+	.additional_info {
+		.column(6);
+		.last;
+		
+		h2 {
+			.font-size(20px);
+		}		
+	}
+}
+
+/** Single Pages for RV Boondocks
+--------------------------------------------------------------*/
+.single-rvboons {
+	.additional_info {
+		.column(6);
+		.last;
+		text-align: center;
+		background: none;
+		
+		h2 {
+			display: block;
+		}	
+		p {
+			.green-button;
+			width: 100%;
+			color: #333;
+			border: none;
+			display: block;
+			.font-size(20px);
+			box-shadow: none;
+		}		
+	}
+}
+
+/* Blog Archive
+********************************************/
+.blog, .archive, .blog404 {
+	.entry-summary {
+		.entry-thumbnail {
+			.column(5);
+			.first;
+			.margin-bottom(5px);
+			
+			img {}
+		}
+		.entry {
+			.column(7);
+			.last;
+			.max-height(104px);
+		}
+		.read-more {
+			.column(7);
+			.last;
+			clear: none;
+		}
+	}
+}

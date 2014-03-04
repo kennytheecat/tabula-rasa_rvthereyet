@@ -1,0 +1,1422 @@
+/******************************************************************
+** Site Name: rvthereyetdirectory.com
+** Stylesheet: 768 ( Tablet & Small Desktop Stylesheet )
+******************************************************************/
+
+/******************************************************************
+TABLE OF CONTENTS
+- REPEATABLE PATTERNS 
+	- Site Specific Patterns
+- LAYOUT & GRID STYLES
+	- Page Structure
+	- Layout Selection
+	- Links
+	- H1, H2, H3, H4, H5, H6 Styles
+	- The Basics
+- HEADER & NAVIGATION
+	- Site Header
+	- Navigation
+- POSTS & CONTENT STYLES
+	- Entry Header
+	- Entry Meta
+	- Entry Content
+	- Galleries
+	- Attachments
+	- Paging Navigation
+- STANDARD PAGES
+	- Starter Pages
+	- Listing Pages
+	- Single Pages
+		- Single Pages for RV Parks
+	- Blog Styles
+		- Blog Archive
+		- Blog Single Post
+	- Archives
+	- Search Results
+	- 404
+	- Everything Else
+- COMMENT STYLES
+- COMMENT FORM STYLES
+- SIDEBARS & ASIDES
+	- Widget 1
+	- Widget 2
+- FOOTER STYLES
+- Author BIOS
+- MULTI-SITE
+
+******************************************************************/
+
+
+/******************************************************************
+REPEATABLE PATTERNS
+******************************************************************/
+
+/* Site Specific Patterns
+-------------------------------------------------------------- */
+.wrap {
+	.max-width(1000px);
+	margin: 0 auto 0;
+}
+hr {
+	clear: both; 
+	border-top: 1px solid @sec-color;
+}
+
+/** Blog List **/
+ul.blog_list {
+	li {
+		a {
+			p {}
+			span.h3 {}
+		}
+	}
+}
+
+/** Select for dropdown menus **/
+select {}
+.dropdown_section {}
+
+/** Floating Social Bar **/
+.admin-bar #fsb-social-bar.fsb-fixed {
+	.top(25px) !important;	
+}
+.float_share {
+	#fsb-social-bar {
+		background: @main-bg !important;
+			
+		&.fsb-fixed {
+			border-bottom: none !important;
+			box-shadow: 0px 7px 7px -7px #000;
+		}
+		.fsb-title {
+			.padding-left(120px) !important;
+			.font-size(20px) !important;
+			text-shadow: 1px 1px 0px rgba(238, 238, 238, 0.5);
+		}
+		.fsb-share-twitter {
+			display: inline;
+		}		
+		.fsb-share-pinterest {
+			display: inline;
+		}		
+	}
+}
+
+/** Stars used for ratings **/
+img.rating_star {
+	float: left;	
+	.padding(0px);
+}
+
+/** Shadows on Featured Parks **/
+.shadow-left, .shadow-right  {
+	.height(14px);
+	.width(144px);
+	.margin-left(3px);
+}
+.shadow-left {
+	background-image: url(http://d165edf7ap6qba.cloudfront.net/wp-content/themes/RVTY/graphics/shadow-left.png);
+	float: left;
+}
+.shadow-right {
+	background-image: url(http://d165edf7ap6qba.cloudfront.net/wp-content/themes/RVTY/graphics/shadow-right.png); 
+	float: right;
+}
+
+/** Map Stuff
+***************************************/
+/** Map Container **/
+.map_wrapper {
+	float: right;
+	.margin-bottom(20px);
+}
+
+/* Fixes zoom controls - they display funny otherwise */
+.gmnoprint img {
+}
+/** Fixes infobubble from being too wide **/
+div[class*="ibani"] > div[style]  {}
+.phoney {
+	p {		
+		a {}
+	}
+}
+
+/** RV PARK REVIEW
+-----------------------------------------------------------------*/
+.comment_wrap {
+	.margin-left(30px);
+	
+	.comment-meta {
+		.comment_col1 {
+			.column(5);
+			.first;
+			.margin-bottom(5px);
+
+			.avatar {
+				float: left;
+				.margin-right(5px);
+				border: 4px solid #685;
+				margin-left: -39px;
+				box-shadow: 0 8px 6px -6px black;
+				border-radius: 0px;
+				display: inline;
+			}
+		}
+		.comment_col2 {
+			.column(7);
+			.last;
+			.margin-top(10px);
+
+			.comment_fb {
+				text-align: center;
+				
+				a {}
+			}
+		}
+	}
+	.comment_text_wrap {}		
+} // end .comment_wrap
+
+
+
+/******************************************************************
+LAYOUT & GRID STYLES
+******************************************************************/
+/* Page Structure
+-------------------------------------------------------------- */
+/*
+body
+	#page .site
+		> header#masthead .site-header
+		+ #main .site-main
+			>#primary .content-area
+				>#content .site-content
+			+#secondary .widget-area
+		+footer#colophon .site-footer
+-------------------------------------------------------------- */
+html {}
+body {
+	background: @main-bg;
+}
+.site {}	
+.site-header {}
+.site-main {
+	clear: both;
+	.wrap;
+	background: none;
+	//padding: 0;
+	
+	.content-area {
+		.wrap;
+		background: @main-bg;
+		
+		.site-content {
+			.margin-top(5px);
+		}
+	}	
+	.widget-area {
+	}
+}
+.site-footer {}
+
+/** Layout Selection
+-------------------------------------------------------------- */ 
+// chooose a layout
+//.content-sidebar(4); //enter value of sidebar
+//.content-sidebar-sidebar(3, 4, 5); //enter value of content then sidebar(s) combined	
+//.sidebar-content(4); //enter value of sidebar
+//.sidebar-sidebar-content(3, 3, 6); //enter value of sidebar(s) combined then content
+//sidebar-content-sidebar(3, 6, 3); //enter value of sidebar(s) combined
+
+/** Links
+-------------------------------------------------------------- */
+a, a:visited {
+
+	/* on hover */
+	&:hover, &:focus {	
+		color: @link-hover;
+		text-decoration: underline;
+	}
+	/* on click */
+	&:active {}
+}
+
+/** H1, H2, H3, H4, H5, H6 Styles 
+-------------------------------------------------------------- */
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+	a {	}
+}
+
+h1, .h1 {
+	text-shadow: 1px 1px 0px rgba(238, 238, 238, 0.5);
+}
+h2, .h2 {}
+h1, .h1, h2, .h2 {}
+h3, .h3 {}
+h4, .h4 {}
+h5, .h5 {}
+h6, .h6 {}
+
+/** THE BASICS
+-------------------------------------------------------------- */
+p {}
+ul, ol, table, dl {}
+ul, ol {	
+	li {}
+}
+ul {
+	li {}
+}
+ol {
+	li {}
+}
+ul ul {}
+ol ol {}
+ol ul {}
+ul ol {}
+blockquote {
+	&:before {}
+	p:last-child {}
+}
+table {
+	caption {}
+	tr {
+		th {}
+		td {}
+		.even {}
+		.odd{}
+	}
+}
+dl {
+	dt {}
+	dd {}
+}
+img {}
+.alignleft, img.alignleft {}
+.alignright, img.alignright {}
+.aligncenter, img.aligncenter {}
+embed, iframe,
+video, object {}
+code {}
+del {}
+hr {}
+pre {
+	code {}
+}
+address {}	
+ins {}	
+abbr,
+dfn,
+acronym {}
+
+
+/******************************************************************
+HEADER & NAVIGATION
+******************************************************************/
+/** Navigation
+-------------------------------------------------------------- */
+ul.nav-menu {
+	li {
+		
+		&.menu-item-94350,
+		&.menu-item-94363 {
+			display: inline-block;
+		}
+		ul {}
+	}
+}
+
+/** Second Navigation
+************************************/
+/*
+#sec_nav {
+	.wrap; 
+	.margin-top(2px);
+
+	.menu-header {
+		.padding-top(2px);
+		.wrap;
+		
+		ul {
+			float: left; 
+			text-align: right;
+			.padding-top(5px);	
+			margin:0;
+			.column(9);
+			.first;	
+			
+			li { 
+				display: inline;
+				.padding(0, 5px);
+				
+				a {
+					.font-size(16px);
+					font-family: @serif;
+					color: #111;
+					
+					&:hover { 
+						text-decoration: underline; 
+					}
+				}
+			}
+		}
+		.dropdown_section {
+			.padding-top(1px);
+			float: left;
+			.column(3);
+			.last;
+			.margin-bottom(-20px);
+			
+			select {}
+		}
+	}
+}
+*/
+/******************************************************************
+POSTS & CONTENT STYLES
+******************************************************************/
+.hentry {
+	header {}
+	footer {}
+	img {}	
+} /* end .hentry */
+
+/* post meta
+-------------------------------------------------------------- */
+.byline {
+	time {}
+}
+
+/** Entry Header
+-------------------------------------------------------------- */
+.entry-header {}
+
+/** Entry Title
+-------------------------------------------------------------- */
+.entry-title {
+	a {}
+}
+
+/** Entry Thumbnail
+-------------------------------------------------------------- */
+.entry-thumbnail {}
+
+/** Entry Meta 
+-------------------------------------------------------------- */
+.entry-meta {
+	.date {}
+	.categories-links {}
+	.tag-links {}
+	.author {}
+	.edit-link {} 
+	a {
+		&:hover { color: @link-hover; }	
+	}
+}	
+
+/** Entry Format
+-------------------------------------------------------------- */
+.entry-format {}
+.comments-link {
+	a {
+		&:hover { color: @link-hover; }
+	}
+}
+
+/** Entry content 
+-------------------------------------------------------------- */
+.entry-content {} /* end .entry-content */
+
+.wp-caption {	
+	img {}
+	p.wp-caption-text {}
+} /* end .wp-caption */
+
+/** Galleries 
+-------------------------------------------------------------- */
+.gallery {
+	dl {
+		a {}
+		img {}
+	}
+	dt {}
+	dd {}
+} /* end .gallery */
+
+/* gallery caption styles */
+.gallery-caption {}
+.size-full {}
+.size-large {}
+.size-medium {}
+.size-thumbnail {}
+ 
+/** Attachments 
+-------------------------------------------------------------- */
+article.attachment {
+	.image-attachment div.attachment {
+		p {}
+		img {}
+	}	
+	.image-attachment .entry-caption {}
+}	
+
+/** Paging Navigation 
+-------------------------------------------------------------- */
+.site-content nav {}
+#nav-above {}
+.paged #nav-above {}
+.nav-previous,
+.previous-image {}
+.nav-next,
+.next-image {}
+#comment-nav-above {}
+
+/******************************************************************
+STANDARD PAGES
+******************************************************************/
+
+/** Starter Pages
+-------------------------------------------------------------- */
+/** Taxonomy Navigation **/
+.starter_tax_nav {
+	display: block;
+	.dropdown_section:nth-of-type(1) {
+		.column(6);
+		.first;
+		.margin-top(20px);
+	}
+	.dropdown_section:nth-of-type(2) {
+		.column(6);
+		.last;
+		.margin-top(20px);
+	}	
+}
+.starter_tax_nav_mobile {
+	display: none;
+}
+.starter_map {
+	clear: both;
+	.column(6);
+	.first;
+	
+	div {
+		.us_map_green_trans;
+		padding-top: 77.608695652%;
+		width: 106.52%;
+		background-size: cover;
+	}
+}
+.calltoaction{
+	.column(6);
+	.last;
+	
+	div {
+		display: block;
+		.calltoaction_sprite;
+		padding-top: 72.916%;
+		width: 102.08%;
+		background-size: cover;		
+	}
+	h2 {}
+}
+
+/** Listing Pages
+-------------------------------------------------------------- */
+.tax_nav {
+	.dropdown_section:nth-of-type(1) {
+		.column(3);
+		.first;
+		.margin-top(20px);
+	}
+	.dropdown_section:nth-of-type(2) {
+		.column(5.5);
+		.margin-top(20px);
+	}	
+}
+
+.listing_blogs {
+	/*
+	.column(3.5);
+	.last;	
+	*/
+	display: none;
+}
+.listing_reviews{
+	clear: both;
+	display: inline;
+	
+	h2 {
+		.green-button;
+		text-shadow: none;
+		.margin-bottom(20px);
+		.font-size(20px);
+	}
+	article {
+		.column(6);
+		
+		&:first-of-type {
+			.first;
+		}
+		&:nth-of-type(2) {
+			.last;
+		}
+		&:last-of-type{
+			display: none;
+		}	
+		.comment_wrap header .comment_col1 {
+			width: 100%;
+		}
+	}
+}
+.no_overnight, .free_dump {
+	.margin-right(5px);
+}
+.nothing_found {
+	clear: both;
+	.column(8);
+	.first;
+	
+	h2 {
+		text-align: center;
+	}
+}
+
+
+/** Single Pages
+-------------------------------------------------------------- */
+/*
+#basicinfo { 
+	.column(4);
+	.first;
+	.padding-bottom(5px); 
+	
+	h1 {  
+		.margin(0px); 
+	}
+	address {}
+	p {}
+} 
+*/
+/* Featured Park Section */
+/*
+#rvpark_featured_parks { 
+	.column(4);
+	.last;	
+	.padding-bottom(5px);
+	
+	h2 {
+		.margin(0px);
+	}
+}
+*/
+.feat_parks {
+	background-color: @white;
+	border-radius: 5px;
+	overflow: hidden;
+	.padding(5px);
+	
+	h2 {
+		display:inline;
+	}
+	a {
+		text-decoration: none; 
+		color: #000;
+		
+		.feat_parks a:hover { color: @link-hover; }
+	}
+	img {
+		float: left;
+		.padding-right(10px);
+		margin-bottom: 0;
+		box-shadow: none;
+	}
+	img.rating_star {
+	}
+}
+.no_feat_parks p {
+	.padding(5px 10px);
+	
+	a {
+		text-decoration: underline;
+		color: @link-color;
+		font-weight: bold;
+	}
+}
+
+/* Photo Gallery or Ad*/
+
+#photo_gallery_or_ad {
+	/*border: 2px solid #DDD;
+	background: @white;
+	text-align: center;*/
+	.column(5.5);
+	.first;
+	clear: both;
+}
+
+/** Ad Area  **/
+/*
+.ad_area_aside {
+	.padding-top(5px);
+	
+	iframe {
+		height: 250px;
+		margin: 0;
+		padding: 0;
+	}
+}
+*/
+/**  MAP  **/
+
+.map_wrapper {
+	.column(6.5);
+	.last;
+}
+/*
+#map { 
+	border: solid 2px #DDD; 
+	width: 100%;
+	
+	div {
+		box-sizing: content-box;
+	}
+}
+*/
+
+/**  DESCRIPTION OR NEARBY  **/
+/*
+.description_or_nearby {
+	.column(4);
+	.first;
+	float: left;
+	.padding-bottom(10px);
+	
+	.nearby {
+		display: block;
+	}
+	h2 {
+		margin-top: 0;
+		.padding-top(5px);
+	}
+	ul {
+		margin: 0;
+		padding: 0;
+		
+		li {
+			border-bottom: 1px solid @sec-color;
+			.padding(3px, 0);
+			
+			&:last-of-type {
+				border-bottom: none;
+			}
+		}
+	}
+}
+*/
+
+/** Single Pages for RV Parks
+-------------------------------------------------------------- */
+.type {}
+/*
+.ratings_mobile {
+	display: none;
+}
+.ratings_section {
+	.column(4);
+	text-align: center;
+	
+	#ratings { 
+		display: inline-block; 
+		
+		img {
+			box-shadow: none;
+			.margin(0px);
+		}
+	}
+	.review_button {
+		display: block;
+		.main-button;
+		
+		a { 
+			.padding-top(10px);
+			font-family: 'Open Sans Condensed';
+			text-decoration: none;
+			font-weight: 700;
+			color: green;
+			display: block;
+			.font-size(16px);
+		}
+	}
+	#facebook_badge {
+		display: block;
+	}
+}
+*/
+
+/** Photo Gallery **/
+.photo_gallery {
+	.margin-bottom(-20px);
+	
+	.slideshow-wrapper {
+		.padding(2px);
+		margin: 0px!important;
+	}
+	.portfolio-slideshow { 
+		margin: 0px !important; 
+		
+		img {
+			border-radius: 0px;
+			z-index: 1;
+		}
+	}
+	#scrollable { 
+		.margin-bottom(-25px); 
+		.height(50px);
+	}
+	a.next.browse.right { 
+		top: -16px!important;
+	}
+	.pscarousel { 
+		/* margin: -10px 30px!important; */
+	}
+	a.prev.browse.left.disabled, a.next.browse.right.disabled {
+		visibility: visible!important;
+	}
+}
+#fancybox-title {
+	margin-left: 0 !important;
+}
+
+/**  ADVERT  **/
+/*
+#rvty_advert {
+	.wrap;
+	clear: both;
+	.min-height(25px);
+	display: block;
+	
+	h3 {
+		.font-size(20px);
+		.padding(10px, 0);
+		text-align: center;
+	}
+}
+*/
+
+/**  DETAILS  **/
+/*
+#details_wrap {
+	float: left;
+	.column(8);
+	.last;
+	.border-radius(5px);
+	.padding(10px);
+	.padding-top(5px);
+	
+	ul {}
+	h2{
+		background: @sec-bg;
+	}
+	h3 {}
+	.site_details, .rate_details, .park_details, .club_details {}
+}
+.site_num {
+	h3 {}
+	p {}
+}
+div.hookups, div.accommodations, div.other_camping {
+	.column(4);
+}
+div.hookups {
+	.first;
+}
+div.other_camping {
+	.last;
+}
+div.rates, div.rates_charges, div.payments {
+	.column(4);
+}
+div.rates {
+	.first;
+}
+div.payments {
+	.last;
+}
+div.discounts {	
+	h3 {}
+	ul {		
+		li {}
+	}
+}
+div.features, div.activities, div.atmospheres {
+	li {}
+}
+.dates {
+	h3 {}
+	p {}
+}
+.club_details {
+	h3 {}
+	ul.clubs {		
+		li {}
+	}
+}
+
+/**  REVIEWS AND BLOGS  
+******************************************************/
+#review_box {
+	.column(8);
+	.first;
+	float: left;
+}
+#rvblogs {
+	.padding-top(20px);
+	float: right;
+	.column(4);
+	.last;
+}
+
+/** REVIEWS **/
+#review_box {
+	h2 {}
+	p.comment-form-comment label {}
+}
+
+/** RV BLOGS **/
+#rvblogs {
+	h2 {
+		.green-button;
+		font-family: @sans-serif;
+		text-shadow: none;		
+	}
+	img {
+		.padding(3px);
+		background: white;
+	}	
+}
+
+/** Single Pages for RV Boondocks
+--------------------------------------------------------------*/
+/** ADDITIONAL INFO **/
+.single-rvboons {
+	.ratings_mobile {}
+	.additional_info {
+		.column(4);
+	/*	text-align: center;
+		background: none;
+		
+		h2 {
+			display: block;
+		}	
+		p {
+			.green-button;
+			width: 100%;
+			color: #333;
+			border: none;
+			display: block;
+			.font-size(20px);
+			box-shadow: none;
+		}*/
+	}
+}
+
+/** NEARBY BOONS **/
+.single-rvboons, .single-rvdumps {
+	/*.description_or_nearby {
+		.column(12);
+		.first;
+		
+		h2 {
+			.padding-left(10px);
+			background-color: @sec-color;
+		}
+		ul {
+			margin: 0;
+			padding: 0;
+			
+			li {
+				.column(3);
+				float: left;
+				
+				&:last-of-type {
+					border-bottom: 1px solid @sec-color;
+				}
+				&:nth-of-type(1), &:nth-of-type(5) {
+					.first;
+				}	
+				&:nth-of-type(4), &:nth-of-type(8) {
+					.last;
+				}
+				&:nth-of-type(5), &:nth-of-type(6), &:nth-of-type(7), &:nth-of-type(8) {
+					border-bottom: none;
+				}					
+			}
+		}
+	}*/
+	#review_box {
+		/*.column(6);
+		.first;*/
+		
+		textarea#comment[style] {
+			.width(400px);
+		}
+	}
+	#rvblogs {
+		/*.column(6);
+		.last;*/
+		
+		img {
+			/*float: left;
+			.margin-right(10px);*/
+		}
+	}
+}
+/** Single Pages for RV Dumps
+--------------------------------------------------------------*/
+.single-rvdumps {
+	.ratings_mobile {}
+	.additional_info {
+		.column(4);
+		h2 {}
+		div {
+			span {
+				font-weight: bold;
+			}
+			ul {
+				
+				li {}
+			}
+		}
+		.ul span {}
+	}
+}
+
+/******************************************************************
+BLOG STYLES
+******************************************************************/
+.blog, .single-post, .archive, .search  {
+	.blog404,
+	.content-area {
+		.column(7);
+		.first;
+	}
+	.post {
+		.margin-right(10px);
+		
+		footer {
+			padding: 0;
+		}
+	}
+	header {
+		.margin-bottom(5px);
+	}
+	.author {
+		display: inline;
+	}
+	.categories { 
+		float:right;
+		.padding-bottom(2px);
+	}
+}
+
+/* Blog Archive
+********************************************/
+.blog, .archive, .blog404, .search {
+	.entry-summary {
+		.entry-thumbnail {
+			.column(6);
+			.first;
+			.margin-bottom(5px);
+			
+			img {}
+		}
+		.entry {
+			.column(6);
+			.last;
+			.max-height(124px);
+		}
+		.read-more {
+			.column(12);
+			.last;
+			clear: none;
+		}
+	}
+	.navigation-paging {
+		.screen-reader-text {}	
+	}			
+}
+
+/* Blog Single Post
+********************************************/
+.single-post {
+	.orig_source {
+		text-align: center;
+		width: 100%;
+		clear: both;
+		
+		a {
+			.padding(5px, 20px);
+			.font-size(14px);
+			
+				&:hover {
+					color: @white;
+					text-decoration: none;
+				}
+		}
+	}
+	.navigation-post {
+		.margin-top(20px);
+
+		.screen-reader-text {}			
+	}
+	
+	/** Social Sharing Bar **/
+	#fsb-social-bar {
+		.fsb-title {
+			.padding-left(0px) !important;
+		}
+		.fsb-share-twitter {
+			display: none;
+		}
+		.fsb-share-pinterest {
+			display: none;
+		}		
+	}
+	.blog_ad {
+	}
+	footer {}
+}
+
+/** Advertise Page
+-------------------------------------------------------------*/
+.park_modules {
+	.margin-top(5px);
+	background: @sec-bg;
+
+	p {}
+	.description {
+		.column(8);
+		.first;
+		border-right: solid 1px @black;
+		.padding-top(0px);
+		.margin-top(0px);		
+		
+		ul {			
+			ul {}
+		}
+	}
+	.listing_cost {
+		.column(4);
+		.last;
+		background: @sec-bg;
+		
+		h2 {}
+		.add_camp_button {
+			
+			a {}			
+		}	
+		.special {}		
+	}
+}
+
+/** Add and Claim Park Pages
+-------------------------------------------------------------*/
+#addpark_wrap {
+	.wrap;
+
+	#rvty_account_info {
+		.column(6); 
+	}
+	.addpark_col_1 { 
+		.column(6);
+		.first;
+		.padding-top(5px);
+	}
+	.addpark_col_2 { 
+		.column(6);
+		.last;
+		.padding-top(5px);
+	}	
+	label { 
+		.column(3);
+		.first;
+	}
+	span.wpcf7-form-control-wrap { 
+		.column(9);
+		.last;
+		
+		input {}
+	}
+	br {}
+	h3 {}
+	hr {}
+	#addpark_submit {}
+}
+
+/** Add Your RV Blog Page
+-------------------------------------------------------------*/
+.add_your_blog {
+	.content-area {
+		.column(8);
+		.first;
+		.margin-top(2px);
+	}
+	.widget-area {
+		.column(4);
+		.last;
+	}
+}
+.badges {
+	h2 {}
+	img {}
+	p {		
+		span {}
+	}
+}
+
+/** Search Results
+-------------------------------------------------------------- */
+.search {}                        /* search page */
+.search-results {}     		        /* search result page */
+.search-no-results {}  		        /* no results search page */
+.search-paged-1 {}      	        /* individual paged search (i.e. body.search-paged-3) */
+	
+/** 404
+-------------------------------------------------------------- */
+.error404 {
+	.blog404  {
+		
+		.column(8);
+		.first;
+		margin-left: 0!important;
+		.margin-top(2px)!important;
+		
+		.entry-title {
+			.margin-top(10px);
+		}
+	}
+} 
+
+
+/** Everything Else
+-------------------------------------------------------------- */
+.rtl {}                           /* for sites that are read right to left (i.e. hebrew) */
+.home {}                          /* home page */
+.blog {}                          /* blog template page */
+
+.date {}                          /* date archive page */
+	.date-paged-1 {}                /* replace the number to the corresponding page number */
+.attachment {}                    /* attatchment page */
+	.attachmentid-1 {}              /* individual attatchment page (i.e. body.attachmentid-763) */
+	.attachment-mime-type {}        /* style mime type pages */
+.author {}                        /* author page */
+	.author-nicename {}             /* user nicename (i.e. body.author-samueladams) */
+	.author-paged-1 {}              /* paged author archives (i.e. body.author-paged-4) for page 4 */
+.category {}                      /* category page */
+	.category-1 {}                  /* individual category page (i.e. body.category-6) */
+	.category-paged-1 {}            /* replace the number to the corresponding page number */
+.tag {}                           /* tag page */
+	.tag-slug {}                    /* individual tag page (i.e. body.tag-news) */
+	.tag-paged-1 {}                 /* replace the number to the corresponding page number */
+.page-template {}                 /* custom page template page */
+	.page-template-page-php {}      /* individual page template (i.e. body.page-template-contact-php */
+	.page-paged-1 {}                /* replace the number to the corresponding page number */
+	.page-parent {}                 /* parent page template */
+	.page-child {}                  /* child page template */
+	.parent-pageid-1 {}             /* replace the number to the corresponding page number */
+.logged-in {}                     /* if user is logged in */
+.paged {}                         /* paged items like search results or archives */
+	.paged-1 {}                     /* individual paged (i.e. body.paged-3) */
+	
+/****************************************************************
+COMMENTS
+****************************************************************/
+
+/*================================================================
+#review_box
+	.comments-area
+		.comments-title
+		.comment-respond // the form
+		.commentlist // the list of comments
+================================================================*/
+
+.comments-area {
+	.comments-title {
+		span {}
+	}
+	
+/** COMMENT FORM 
+-----------------------------------------------------------------*/
+	.comment-respond {
+		.comment-reply-title {
+			#cancel-comment-reply-link {}
+		}
+		.comment-form {
+			p {}
+			.must-log-in , .logged-in-as { }
+
+			/* Comment Form */
+			.comment-form-comment {
+				.column(8);
+				.first;
+				
+				label {}
+				input[type=text],
+				input[type=email],
+				input[type=url],
+				textarea {
+					&:focus {}
+					
+					/* form validation */
+					&:invalid {}
+				}
+				textarea {
+					width: 395px;
+					float: left;
+				}			
+			} // .comment-form-comment
+			
+			/** Star Ratings Section **/
+			#rating_box {
+				.column(4);
+				.last;
+				
+				p {
+					label {}
+					input[type=radio] {
+						.height(30px);
+					}
+					.rating_star {
+						.padding(3px);
+					}
+				}
+			}
+			.review_policy {
+				clear: both;
+				
+				a {
+					text-decoration: underline;
+				}
+			}
+			.form-submit {
+				clear: both;
+				
+				input[type="submit"] {
+					.font-size(14px);
+					font-weight: 700;
+				}
+			}
+		} // end .comment-form
+	} // .comment-respond
+		
+/** COMMENT LIST 
+-----------------------------------------------------------------*/
+/*=================================================================
+	.commentlist
+		.comment_wrap
+			.comment_col1
+			.comment_col2
+			.comment_text_wrap
+		.reply
+==================================================================*/		
+	.commentlist {		
+		article {
+
+/** RV PARK REVIEW
+-----------------------------------------------------------------*/		
+
+			.reply {}
+		} // end article - rv park review		
+
+/** RV PARK RESPONSE
+-----------------------------------------------------------------*/		
+		.children {
+			article {
+				/*
+				width: 100%; 
+				margin: -15px auto 0;*/
+			
+				.comment_wrap {
+					.padding(5px, 10px);
+					
+					.comment_col1 {}
+				}
+				h2 {}
+			}
+		}	
+	} // end .commentlist
+} // end .comments-area	
+
+/******************************************************************
+SIDEBARS & ASIDES
+******************************************************************/
+.widget-area {
+	.column(5);
+	.last;
+	.margin-top(10px);
+	
+	.widget {
+		word-wrap: break-word;
+		.margin-bottom(20px);
+
+		.widget-title {
+			.green-button;		
+		}
+		ul {
+			padding: 0;
+			
+			li {
+				.padding(2px, 0);
+				.padding-left(10px);
+				text-indent: -10px;
+			}
+		}	
+		/* facebook box */
+		&#text-2 .textwidget { 
+			.height(240px);
+			text-align: center;
+			.margin-top(10px);
+		}
+	}
+	#s {
+		width: 75% !important;
+	}	
+	.screen-reader-text {
+		display: none;
+	}
+}
+
+/******************************************************************
+FOOTER STYLES
+******************************************************************/
+.site-footer {
+	.margin-top(20px);
+	.padding(10px, 0);
+	padding-top: 0;	
+
+	.footer_wrap {
+		box-shadow: inset 0px 15px 15px -15px @black; 
+		
+		ul.nav-menu {
+			.wrap;
+			
+			li {
+				display: inline-block;
+				.margin-right(25px);
+				
+				&.menu-item-94324 { // add-your-rv-park
+					padding: 0;
+					display: inline;
+					
+					a {
+						color: @link-color;
+					}
+				}
+				&:hover ul {
+					display: none;
+				}
+			}
+		}
+	}
+}

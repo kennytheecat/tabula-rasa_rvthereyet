@@ -1,0 +1,29 @@
+/******************************************************************
+Site Name: 
+Author: 
+
+Stylesheet: Desktop Stylsheet
+
+This is the desktop size. It's larger than an iPad so it will only
+be seen on the Desktop. 
+
+******************************************************************/
+/** Floating Social Bar **/
+.admin-bar #fsb-social-bar.fsb-fixed {}
+.float_share {
+	#fsb-social-bar {
+		&.fsb-fixed {}
+		.fsb-title {
+			.padding-left(200px) !important;
+		}
+		.fsb-share-twitter {}		
+		.fsb-share-pinterest {}		
+	}
+}
+.single-post {
+	#fsb-social-bar {
+		.fsb-title {
+			.padding-left(60px) !important;
+		}		
+	}
+}

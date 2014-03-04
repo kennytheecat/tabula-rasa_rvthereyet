@@ -1,0 +1,174 @@
+/******************************************************************
+Site Name: 
+Author: 
+
+Stylesheet: 481px and Up Stylesheet
+
+This stylesheet is loaded for larger devices. It's set to 
+481px because at 480px it would load on a landscaped iPhone.
+This isn't ideal because then you would be loading all those
+extra styles on that same mobile connection. 
+
+A word of warning. This size COULD be a larger mobile device,
+so you still want to keep it pretty light and simply expand
+upon your base.less styles.
+
+******************************************************************/
+	
+/*********************
+NAVIGATION STYLES
+*********************/
+.main-navigation {
+	.screen-reader-text {}
+	.skip-link {}
+	/* .menu is clearfixed inside mixins.scss */
+	.nav-menu {
+		ul {
+			li {
+				a {					
+					/*
+					you can use hover styles here even though this size
+					has the possibility of being a mobile device.
+					*/
+					&:hover, &:focus {					
+					}
+				}				
+				&:first-child {}
+				&:last-child {}
+				/* plan your menus and drop-downs wisely. */
+				ul.sub-menu,
+				ul.children {
+					li {
+						a {
+							&:hover,
+							&:focus {}
+							&:link {}
+						}
+						&:first-child {}
+						&:last-child {}
+					}
+				}
+			} /* end .nav-menu li */
+			/* highlight current page */
+			li.current-menu-item, 
+			li.current_page_item,
+			li.current-page-ancestor {
+				a {}
+			}  /* end current highlighters */
+		} /* end .nav-menu ul */
+	} /* end .nav-menu */
+} /* end .main-navigation */
+
+/*********************
+POSTS & CONTENT STYLES
+*********************/
+
+/* entry content */
+.entry-content {
+	/* at this larger size, we can start to align images */
+	.alignleft, img.alignleft { 
+		margin-right: 1.5em; 
+		display: inline; 
+		float: left; 
+	}
+	.alignright, img.alignright { 
+		margin-left: 1.5em; 
+		display: inline; 
+		float: right; 
+	}
+	.aligncenter, img.aligncenter { 
+		margin-right: auto; 
+		margin-left: auto; 
+		display: block; 
+		clear: both; 
+	}	
+} /* end .entry-content */
+
+/*********************
+FOOTER STYLES
+*********************/
+	
+/*
+check your menus here. do they look good?
+do they need tweaking?
+*/
+.footer-links {
+	ul {
+		li {}
+	}
+} /* end .footer-links */
+
+.ratings_mobile {
+	#ratings {
+		float: left;
+		
+		img {}
+	}
+	.rating {}
+}
+	
+/** Floating Social Bar **/
+.float_share {
+	#fsb-social-bar {
+		.fsb-share-twitter {
+			display: inline;
+		}	
+	}
+}
+div.hookups, div.accommodations, div.other_camping {
+	width: 33%;
+}
+div.rates, div.rates_charges, div.payments {
+	width: 33%;
+}
+div.features, div.activities, div.atmospheres {
+	li {
+		width: 33%;
+	}
+}
+.comment_wrap {
+	.comment-meta {
+		.comment_col1 {
+			width: auto;
+			
+			.avatar {}			
+		}
+		.comment_col2 {
+			.margin-top(10px);
+			width: auto;
+
+			.comment_fb {
+				.padding(10px);
+				.font-size(14px);
+				
+				a {}
+			}
+		}
+	}
+}
+.starter_blogs {
+	h2 {}
+	img {
+		display: inline;
+		float: left;
+		.margin-right(10px);
+	} 
+}
+
+/* Blog Archive
+********************************************/
+.blog, .archive, .blog404, .search {
+	.entry-summary {
+		.entry-thumbnail {
+			float: left;
+			.margin-bottom(5px);
+			
+			img {}
+		}
+		.entry {
+			.max-height(125px);
+			display: block;
+		}
+		.read-more {}
+	}
+}

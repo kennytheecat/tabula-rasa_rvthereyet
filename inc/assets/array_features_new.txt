@@ -1,0 +1,158 @@
+<?php 
+RV Park Features
+	24hr Courtesy Patrol
+	BBQ Grills
+	Chapel
+	Convenience Store
+	Dump Station
+	Electric Car Charging Stations
+	Fire Pits
+	Firewood
+	Fitness Center
+	Gas/Diesel
+	Internet Access
+	Kitchen
+	Laundry Facilities
+	Library
+	Livestock Corrals
+	Meeting Rooms
+	Pavillion
+	Pet Area
+	Picnic Area
+	Propane Station
+	RV Maintenance/Repair
+	RV Storage
+	Recreation Hall
+	Restaurant/Snack Bar
+	Restroom/Shower Facilities
+	TV/Satellite Service
+	Wifi
+
+Activities
+	ATV/Four Wheeling
+	Arcade/Game Room
+	Basketball
+	Beach Access
+	Bike Rentals
+	Billiards
+	Boat Ramp
+	Boat Rentals
+	Boating
+	Canoeing/
+	Climbing
+	Fishing
+	Fly Fishing
+	Forest Access
+	Frisbee Golf
+	Gaming/Casino
+	Golf Cart Rentals
+	Golf Course
+	Hang/Para Gliding
+	Hiking/Nature Trails
+	Horseback Riding
+	Horseshoes
+	Hot Springs
+	Hot Tub/Sauna
+	Lake Access
+	Marina
+	Mini Golf
+	Ocean Access
+	Paddleboats
+	Ping Pong
+	Planned Activities
+	Playground
+	River Access
+	River Rafting
+	Sailing/Windsurfing
+	Scuba/Snorkeling
+	Shuffle Board
+	Skate Park
+	Skiing
+	Snowboarding
+	Snowmobiling
+	Surfing
+	Swiming Pool
+	Tennis
+	Tubing
+	Volleyball
+	Water Park/Slides
+
+Atmosheres
+	Adult 21 And Over
+	Age Restricted (55+)
+	Family Friendly
+	Handicapped Access
+	Motorcoach Only
+	No Alcohol
+	Pet Friendly
+	Snowbird Friendly
+	Public Nudity Allowed
+	
+Payment Methods
+	American Express
+	Cash
+	Check
+	Credit Cards Not Accepted
+	Discover
+	MasterCard
+	Visa
+
+Site Options
+# of RV Sites
+	Hookups
+20 Amp
+30 Amp
+50 Amp
+50 Amp+
+Dry Camping
+Full Hookups
+No Sewer 
+No Water
+Cable TV
+
+	Accomodations
+Big Rig Capable
+Group Camping Area
+Paved Sites
+Pull Through Sites
+Shaded Sites
+Slide out Sites
+		
+	Other Camping Types
+Teepees/Yurts
+Tent Sites
+Rental Trailers
+Lodge Rooms
+Park Models
+Cabins
+		
+Clubs
+	AARP
+	AAA
+	Best Parks in America
+	Club Yogi
+	Encore
+	Enjoy America
+	Family Campers & RVers
+	Family Motor Coach Association
+	Good Sam Club
+	Happy Camper Club
+	KOA Value Kard Rewards
+	Military
+	Passport America
+	Resort Parks International
+	Sun Communities
+	Thousand Trails
+
+$park_cost_arr = array(
+"Daily - Full Hookup",
+"Weekly - Full Hookup",
+"Monthly Full Hookup",
+"Daily - Partial",
+"Weekly - Partial",
+"Monthly - Partial",
+"Daily - Dry",
+"Weekly - Dry",
+"Monthly - Dry"
+);
+?>

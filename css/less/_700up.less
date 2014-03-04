@@ -1,0 +1,162 @@
+#photo_gallery_or_ad {
+	.column(6);
+	.first;
+	clear: both;
+}
+/**  MAP  **/
+.map_wrapper {
+	.column(6);
+	.last;
+}
+
+/**  DESCRIPTION OR NEARBY  **/
+.description_or_nearby {
+	.column(4);
+	.first;
+	float: left;
+	.padding-bottom(10px);
+	.margin-top(10px);
+	clear: both;
+	
+	.nearby {
+		display: block;
+	}
+	h2 {
+		margin-top: 0;
+		.padding-top(5px);
+	}
+	ul {
+		margin: 0;
+		padding: 0;
+		
+		li {
+			border-bottom: 1px solid @sec-color;
+			.padding(3px, 0);
+			
+			&:last-of-type {
+				border-bottom: none;
+			}
+		}
+	}
+}
+/**  DETAILS  **/
+#details_wrap {
+	float: left;
+	.column(8);
+	.last;
+	.border-radius(5px);
+	.padding-top(5px);
+	clear: none;
+	.margin-top(10px);
+	
+	ul {}
+	h2{
+		background: @sec-bg;
+	}
+	h3 {}
+	.site_details, .rate_details, .park_details, .club_details {}
+}
+.site_num {
+	h3 {}
+	p {}
+}
+div.hookups, div.accommodations, div.other_camping {
+	.column(4);
+}
+div.hookups {
+	.first;
+}
+div.other_camping {
+	.last;
+}
+div.rates, div.rates_charges, div.payments {
+	.column(4);
+}
+div.rates {
+	.first;
+}
+div.payments {
+	.last;
+}
+div.discounts {	
+	h3 {}
+	ul {		
+		li {}
+	}
+}
+div.features, div.activities, div.atmospheres {
+	li {}
+}
+.dates {
+	h3 {}
+	p {}
+}
+.club_details {
+	h3 {}
+	ul.clubs {		
+		li {}
+	}
+}
+
+/** Single Pages for RV Boondocks
+--------------------------------------------------------------*/
+.single-rvboons, .single-rvdumps {
+	.description_or_nearby {
+		.column(12);
+		.first;
+		.margin-top(10px);
+		
+		h2 {
+			.padding-left(10px);
+			background-color: @sec-color;
+		}
+		ul {
+			margin: 0;
+			padding: 0;
+			
+			li {
+				.column(3);
+				float: left;
+				border-bottom: none;
+				
+				
+				&:last-of-type {
+				}
+				&:nth-of-type(1), &:nth-of-type(5) {
+					.first;
+					clear: both;
+				}	
+				&:nth-of-type(4), &:nth-of-type(8) {
+					.last;
+				}
+				&:nth-of-type(5), &:nth-of-type(6), &:nth-of-type(7), &:nth-of-type(8) {
+					border-top: 1px solid @sec-color;
+				}					
+			}
+		}
+	}
+}
+
+/* Blog Archive
+********************************************/
+.blog, .archive, .blog404, .search {
+	.entry-summary {
+		.entry-thumbnail {
+			.column(4);
+			.first;
+			.margin-bottom(5px);
+			
+			img {}
+		}
+		.entry {
+			.column(8);
+			.last;
+			.max-height(124px);
+		}
+		.read-more {
+			.column(8);
+			.last;
+			clear: none;
+		}
+	}
+}

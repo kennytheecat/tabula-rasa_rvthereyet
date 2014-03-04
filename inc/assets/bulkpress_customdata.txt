@@ -1,0 +1,277 @@
+/** States
+--------------------------------- */
+Alabama
+Alaska
+Arkansas
+Arizona
+California
+Colorado
+Connecticut
+Delaware
+Florida
+Georgia
+Idaho
+Illinois
+Indiana
+Iowa
+Kansas
+Kentucky
+Louisiana
+Maine
+Maryland
+Massachusetts
+Michigan
+Minnesota
+Mississippi
+Missouri
+Montana
+Nebraska
+New Hampshire
+New Jersey
+New Mexico
+New York
+North Carolina
+North Dakota
+Nevada
+Ohio
+Oklahoma
+Oregon
+Pennsylvania
+Rhode Island
+South Carolina
+South Dakota
+Tennessee
+Texas
+Utah
+Vermont
+Virginia
+Washington
+West Virginia
+Wisconsin
+Wyoming
+
+//CANADA
+Alberta
+British Columbia
+Manitoba
+New Brunswick
+Newfoundland
+Nova Scotia
+Prince Edward
+Quebec
+Saskatchewan
+Yukon Territories
+
+//Blog Categories
+Boondocking
+Fulltiming
+Pets
+RV Cooking
+RV Tech
+RVing Family
+Snowbirding
+Workamping
+
+
+/** RV Park Features - 32
+--------------------------------- */
+24hr Courtesy Patrol
+BBQ Grills
+Boat Ramp
+Boat Dock
+Chapel
+Convenience Store
+Dump Station
+Electric Car Charging Stations
+Fire Pits
+Firewood
+Forest Access
+Gas Station
+Handicapped Access
+Hot Showers
+Internet Access
+Kitchen
+Lake Access
+Laundry Facilities
+Library
+Livestock Corrals
+Marina
+Meeting Rooms
+Ocean Access
+Pavillion
+Pet Area
+Picnic Area
+Propane Station
+RV Repair Services
+RV Storage
+Recreation Hall
+Restaurant
+River Access
+Satellite TV
+Wifi
+
+/** Activities - 35
+--------------------------------- */
+Arcade/Game Room
+Basketball
+Bike Rentals
+Billiards
+Boat Rentals
+Boating
+Canoeing
+Climbing
+Fishing
+Fitness Center
+Fly Fishing
+Frisbee Golf
+Gaming/Casino
+Golf Cart Rentals
+Golf Course
+Horseback Riding
+Horseshoes
+Hot Springs
+Hot Tub/Sauna
+Mini Golf
+Paddleboats
+Ping Pong
+Planned Activities
+Playground
+River Rafting
+Shuffle Board
+Skate Park
+Skiing
+Snowboarding
+Snowmobiling
+Surfing
+Swiming Pool
+Tennis
+Tubing
+Volleyball
+
+/** Atmoshperes
+--------------------------------- */
+Adult 21 And Over
+Age Restricted (55+)
+Family Friendly
+Motorcoach Only
+No Alcohol
+Pet Friendly
+Snowbird Friendly
+Public Nudity Allowed
+	
+/** Payment Methods
+--------------------------------- */
+American Express
+Cash
+Check
+Credit Cards Accepted
+Credit Cards Not Accepted
+Discover
+MasterCard
+Visa
+
+/** Discounts
+--------------------------------- */
+Groups
+Military
+Monthly Stay
+Seniors
+Weekly Stay
+
+/** Site Options
+--------------------------------- */
+# of RV Sites
+/** Hookups **/
+20 Amp
+30 Amp
+50 Amp
+50 Amp+
+Dry Camping
+Full Hookups
+No Sewer 
+No Water
+Cable TV
+
+/** Accomodations **/
+Big Rig Capable
+Group Camping Area
+Paved Sites
+Pull Through Sites
+Shaded Sites
+Slide out Sites
+		
+/** Other Camping Types **/
+Teepees/Yurts
+Tent Sites
+Rental Trailers
+Lodge Rooms
+Park Models
+Cabins
+		
+/** Clubs
+--------------------------------- */
+AAA
+AARP
+Adventure Camping Network
+Adventure Outdoor Resorts
+Best Parks in America
+C2C Good Neighbor Parks
+Camp Club USA
+Coast to Coast
+Encore
+Enjoy America
+Escapees
+FMCA
+Good Sam Club
+Guests First RV Resorts
+Happy Campers
+KM Resorts of America
+KOA
+North American Camping Club
+Outdoor Adventures
+Outdoor Resorts of America
+Passport America
+Premier RV Resorts
+Recreation USA
+Resort Parks International
+Resorts of Destinction
+Sunbelt USA
+Sunrise Resorts
+Thousand Trails
+TT ELS Park Pass
+TT Leisure Time Resorts
+TT Mid-Atlantic Resorts
+TT NACO
+TT Outdoor World
+Western Horizon Resorts
+Yogi Bears Jellsytone Park
+
+/** Filters
+-------------------------------- */
+50 Amp
+Big Rig Capable
+Dump Station
+Electric Car Charging Stations
+Pet Friendly
+Snowbird Friendly
+Tent Sites
+Wifi
+
+/** Camp Filters
+-------------------------------- */
+Camp Club USA
+Coast to Coast
+Escapees
+FMCA
+Good Sam Club
+Happy Campers
+KOA
+Yogi Bears Jellsytone Park
+
+/** Type
+-------------------------------- */
+Federal
+Membership Only
+Privately Owned
+Public / City
+State

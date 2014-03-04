@@ -1,0 +1,2031 @@
+/******************************************************************
+** Site Name: rvthereyetdirectory.com
+** Stylesheet: Base
+******************************************************************/
+
+/******************************************************************
+TABLE OF CONTENTS
+- REPEATABLE PATTERNS
+	- Site Specific Patterns
+- LAYOUT & GRID STYLES
+	- Page Structure
+	- Layout Selection
+	- Links
+	- H1, H2, H3, H4, H5, H6 Styles
+	- The Basics
+- HEADER & NAVIGATION
+	- Site Header
+	- Navigation
+	- Social
+- POSTS & CONTENT STYLES
+	- Entry Header
+	- Entry Meta
+	- Entry Content
+	- Galleries
+	- Attachments
+	- Paging Navigation
+- STANDARD PAGES
+	- Starter Pages
+	- Listing Pages
+	- Single Pages
+		- Single Pages for RV Parks
+		- Single Pages for RV Boondocks
+		- Single Pages for RV Dumps
+	- Blog Styles
+		- Blog Archive
+		- Blog Single Post
+	- Archives
+	- Search Results
+	- 404
+	- Everything Else
+		- Advertise Page
+		- Add and Claim Park Pages
+		- Add Your RV Blog Page
+- COMMENT STYLES
+- COMMENT FORM STYLES
+- SIDEBARS & ASIDES
+	- Widget 1
+	- Widget 2
+- FOOTER STYLES
+- Author BIOS
+- MULTI-SITE
+******************************************************************/
+
+
+/******************************************************************
+REPEATABLE PATTERNS
+******************************************************************/
+// proper formatting (http://blog.fontdeck.com/post/9037028497/hyphens) 
+p {
+	-webkit-hyphens: auto;
+	-epub-hyphens:   auto;
+	-moz-hyphens:    auto;
+  hyphens:         auto;
+}
+
+/* Small headers
+-------------------------------------------------------------- */
+.archive-title,
+.page-title,
+.widget-title,
+.entry-content th,
+.comment-content th {
+	.font-size(11px);
+	font-weight: bold;
+	text-transform: uppercase;
+	color: #636363;
+}
+
+/* Form fields, general styles first
+-------------------------------------------------------------- */
+button,
+input,
+textarea {
+	border: 1px solid #ccc;
+	.border-radius(3px);
+	font-family: inherit;
+	.padding(6px);
+}
+button,
+input {
+    line-height: normal;
+}
+textarea {
+	font-size: 100%;
+	overflow: auto;
+	vertical-align: top;
+}
+
+/* Reset non-text input types
+-------------------------------------------------------------- */
+input[type="checkbox"],
+input[type="radio"],
+input[type="file"],
+input[type="hidden"],
+input[type="image"],
+input[type="color"] {
+	border: 0;
+	border-radius: 0;
+	.padding(0);
+}
+
+/* Buttons
+-------------------------------------------------------------- */
+.menu-toggle,
+input[type="submit"],
+input[type="button"],
+input[type="reset"],
+article.post-password-required input[type=submit],
+li.bypostauthor cite span {
+	.padding(6px, 10px);
+	.font-size(11px);
+	font-weight: normal;
+	color: #7c7c7c;
+	background-color: #e6e6e6;
+	background-repeat: repeat-x;
+	/*background-image: -moz-linear-gradient(top, #f4f4f4, #e6e6e6);
+	background-image: -ms-linear-gradient(top, #f4f4f4, #e6e6e6);
+	background-image: -webkit-linear-gradient(top, #f4f4f4, #e6e6e6);
+	background-image: -o-linear-gradient(top, #f4f4f4, #e6e6e6);
+	background-image: linear-gradient(top, #f4f4f4, #e6e6e6);*/
+	border: 1px solid #d2d2d2;
+	.border-radius(3px);
+	box-shadow: 0 1px 2px rgba(64, 64, 64, 0.1);
+	.green-button;
+	.padding(4px, 4px);
+	.font-size(14px);
+	font-weight: bold;
+	font-family: @sans-serif;
+	
+}
+.menu-toggle,
+button,
+input[type="submit"],
+input[type="button"],
+input[type="reset"] {
+	cursor: pointer;
+}
+button[disabled],
+input[disabled] {
+    cursor: default;
+}
+.menu-toggle:hover,
+button:hover,
+input[type="submit"]:hover,
+input[type="button"]:hover,
+input[type="reset"]:hover,
+article.post-password-required input[type=submit]:hover {
+	/*color: #5e5e5e;
+	background-color: #ebebeb;
+	background-repeat: repeat-x;
+	background-image: -moz-linear-gradient(top, #f9f9f9, #ebebeb);
+	background-image: -ms-linear-gradient(top, #f9f9f9, #ebebeb);
+	background-image: -webkit-linear-gradient(top, #f9f9f9, #ebebeb);
+	background-image: -o-linear-gradient(top, #f9f9f9, #ebebeb);
+	background-image: linear-gradient(top, #f9f9f9, #ebebeb);*/
+	
+}
+.menu-toggle:active,
+.menu-toggle.toggled-on,
+button:active,
+input[type="submit"]:active,
+input[type="button"]:active,
+input[type="reset"]:active {
+/*
+	color: #757575;
+	background-color: #e1e1e1;
+	background-repeat: repeat-x;
+	background-image: -moz-linear-gradient(top, #ebebeb, #e1e1e1);
+	background-image: -ms-linear-gradient(top, #ebebeb, #e1e1e1);
+	background-image: -webkit-linear-gradient(top, #ebebeb, #e1e1e1);
+	background-image: -o-linear-gradient(top, #ebebeb, #e1e1e1);
+	background-image: linear-gradient(top, #ebebeb, #e1e1e1);
+	box-shadow: inset 0 0 8px 2px #c6c6c6, 0 1px 0 0 #f4f4f4;
+	border: none;
+	*/
+}
+li.bypostauthor cite span {
+	color: #fff;
+	background-color: #21759b;
+	background-image: none;
+	border: 1px solid #1f6f93;
+	.border-radius(2px);
+	box-shadow: none;
+	.padding(0);
+}
+
+/** Responsive images 
+-------------------------------------------------------------- */
+.entry-content img,
+.comment-content img,
+.widget img {
+	max-width: 100%; /* Fluid images for posts, comments, and widgets */
+}
+img[class*="align"],
+img[class*="wp-image-"],
+img[class*="attachment-"] {
+	height: auto; /* Make sure images with WordPress-added height and width attributes are scaled correctly */
+}
+img.size-full,
+img.size-large,
+img.header-image,
+img.wp-post-image {
+	max-width: 100%;
+	height: auto; /* Make sure images with WordPress-added height and width attributes are scaled correctly */
+}
+
+/** Images
+-------------------------------------------------------------- */
+.alignleft {
+	float: left;
+}
+.alignright {
+	float: right;
+}
+.aligncenter {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+.entry-content img,
+.comment-content img,
+.widget img,
+img.header-image,
+.author-avatar img,
+img.wp-post-image {
+	/* Add fancy borders to all WordPress-added images but not things like badges and icons and the like */
+	border-radius: 3px;
+	box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+}
+.wp-caption {
+	max-width: 100%; /* Keep wide captions from overflowing their container. */
+	.padding(4px);
+}
+.wp-caption .wp-caption-text,
+.gallery-caption,
+.entry-caption {
+	font-style: italic;
+	.font-size(12px);
+	color: #757575;
+}
+img.wp-smiley,
+.rsswidget img {
+	border: 0;
+	border-radius: 0;
+	box-shadow: none;
+	margin-bottom: 0;
+	margin-top: 0;
+	.padding(0);
+}
+.entry-content dl.gallery-item {
+	.margin(0);
+}
+.gallery-item a,
+.gallery-caption {
+	width: 90%;
+}
+.gallery-item a {
+	display: block;
+}
+.gallery-caption a {
+	display: inline;
+}
+.gallery-columns-1 .gallery-item a {
+	max-width: 100%;
+	width: auto;
+}
+.gallery .gallery-icon img {
+	height: auto;
+	max-width: 90%;
+	.padding(5%);
+}
+.gallery-columns-1 .gallery-icon img {
+	.padding(3%);
+}
+
+/* Site Specific Patterns
+-------------------------------------------------------------- */
+/** Blog List **/
+ul.blog_list {
+	padding: 0;
+	margin: 0;
+	
+	li {
+		a {
+			text-decoration: none;
+			text-align: justify;
+			
+			p {
+				margin: 0;
+				.margin-bottom(10px);
+				padding: 0;
+			}
+			span.h3 {
+				font-family: @serif; 
+			}
+		}
+	}
+}
+
+/** Select for dropdown menus **/
+select {
+	width: 100%;
+	font-family: @serif;
+	.font-size(16px);
+	border: 1px solid #B96;
+	background: #EDA;
+	color: @link-color;	
+}
+.dropdown_section {
+	float: none;
+	width: 100%;
+	.padding-bottom(20px);
+}
+
+/** Floating Social Bar **/
+.admin-bar #fsb-social-bar.fsb-fixed {
+	.top(5px) !important;	
+}
+.float_share {
+	#fsb-social-bar {
+		border-top: 1px solid @black !important;
+		border-bottom: 1px solid @black !important;
+		background: #eda !important;
+		.padding(5px, 0) !important;
+		.padding-bottom(2px) !important;
+		.margin-bottom(10px) !important;
+		
+		&.fsb-fixed {
+			border-bottom: none !important;
+			box-shadow: 0px 7px 7px -7px #000;
+			position: fixed !important;
+			top: -1px !important;			
+		}
+		.fsb-title {
+			margin-top: 0 !important;
+			font-family: @serif !important; 
+		}
+		.fsb-share-twitter {
+			display: none;
+		}
+		.fsb-share-pinterest {
+			display: none;
+		}
+	}
+}
+
+/** Stars used for ratings **/
+div.rating_star {
+	margin-bottom: 0;
+	box-shadow: none;
+	.width(25px);
+	display: inline;
+	float: left;
+	
+	.rating_star_blank_small {
+		.rating_star_blank_small_sprite;
+		padding-top: 80%;
+		width: 1960%;
+		background-size: cover;
+	}
+	.rating_star_full_small {
+		.rating_star_full_small_sprite;
+		padding-top: 80%;
+		width: 1960%;
+		background-size: cover;		
+	}	
+	.rating_star_blank_large {
+		.rating_star_blank_large_sprite;
+		padding-top: 88.88%;
+		width: 1088%;
+		background-size: cover;
+	}
+	.rating_star_full_large { 
+		.rating_star_full_large_sprite;
+		padding-top: 88.88%;
+		width: 1088%;
+		background-size: cover;	
+	}		
+}
+div.not_rated {
+	.width(125px);
+	.not_rated_small {
+		.not_rated_small_sprite;
+		padding-top: 16%;
+		width: 392%;
+		background-size: cover;		
+	}	
+	.not_rated_large {
+		.not_rated_large_sprite;
+		padding-top: 17.77%;
+		width: 217%;
+		background-size: cover;
+		.margin-left(10px);
+	}
+}
+
+/** Map Container **/
+.map_wrapper {
+	border: solid 1px #DDD;
+	.padding(3px);
+	background: @white;
+	width: 100%;
+}
+
+/* Fixes zoom controls - they display funny otherwise */
+.gmnoprint img {
+    max-width: none; 
+}
+/** Fixes infobubble from being too wide **/
+div[class*="ibani"] > div[style]  { 
+	width: auto !important;
+	height: auto !important;
+	min-width: 200px;
+}
+.phoney {
+	p {
+		white-space:nowrap;
+		padding: 0;
+		
+		a {
+			.font-size(12px);
+		}
+	}
+}
+
+/** RV PARK REVIEW
+-----------------------------------------------------------------*/
+.comment_wrap {
+	.padding(5px 10px);
+	background: @white;
+	border: 2px solid @black;
+	border-radius: 0px 5px 5px 5px;		
+
+	.comment-meta {
+		.comment_col1 {
+			float: left;
+			.margin-bottom(-5px);
+			width: 50%;
+			
+			.avatar {
+				display: none;
+			}			
+		}
+		.comment_col2 {
+			float: right;
+			.margin-left(5px);
+			width: 48%;
+			.margin-bottom(5px);
+
+			.comment_fb {
+				background: #3B5998;
+				.padding(5px);
+				.border-radius(3px);
+				font-weight: bold;
+				box-shadow: 0 9px 10px -9px @black;
+				text-align: center;
+				
+				a {
+					color: @white;
+				}
+			}
+		}
+	}
+	.comment_text_wrap {
+		border-top: 1px dashed grey;
+		.padding-top(5px);
+		clear: both;
+	}		
+} // end .comment_wrap
+
+/** Listing Navs **/
+.listing_nav a { 
+	display: block;
+}
+
+/******************************************************************
+LAYOUT & GRID STYLES
+******************************************************************/
+/* Page Structure
+-------------------------------------------------------------- */
+/*
+body
+	#page .site
+		> header#masthead .site-header
+		+ #main .site-main
+			>#primary .content-area
+				>#content .site-content
+			+#secondary .widget-area
+		+footer#colophon .site-footer
+-------------------------------------------------------------- */
+html, body {
+	font-size: 62.5%;
+}
+body {
+	.font-size(14px);
+	font-family: @sans-serif;
+	text-rendering: optimizeLegibility;
+	color: @black;
+}
+.site {}
+.site-header {}
+.site-main {
+	overflow: hidden;
+	background-color: #EDA;
+	.padding(10px);
+	
+	.content-area {
+		.site-content {
+			word-wrap: break-word;
+		}
+	}
+	
+	.widget-area {
+	}
+}
+.site-footer {
+	clear: both;
+}
+
+/** Layout Selection
+-------------------------------------------------------------- */ 
+
+/** Links
+-------------------------------------------------------------- */
+a, a:visited {
+	color: @link-color;
+	text-decoration: none;
+
+	/* on click */
+	&:active {}
+
+	/* mobile tap color */
+	&:link {
+		/*
+		this highlights links on iPhones/iPads.
+		so it basically works like the :hover selector
+		for mobile devices.
+		*/
+		-webkit-tap-highlight-color : rgba( 0, 0, 0, 0.3 );
+	}
+}
+
+/** H1, H2, H3, H4, H5, H6 Styles 
+-------------------------------------------------------------- */
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+	font-family: @serif;
+	text-rendering: optimizelegibility;
+	font-weight: 700;
+	color: @black;
+	padding: 0;
+	.padding-bottom(5px);
+	clear: both;
+	margin: 0;
+	/*
+	if you're going to use webfonts, be sure to check your weights
+	http://css-tricks.com/watch-your-font-weight/
+	*/
+
+	/* removing text decoration from all headline links */
+	a {
+		text-decoration: none;
+	}
+}
+
+h1, .h1 {}
+h2, .h2 {}
+h1, .h1, h2, .h2 {
+	.font-size(20px);
+	font-weight:bold;
+	font-family: 'Open Sans Condensed', serif;
+	color: #333;
+	.padding-bottom(5px);
+	text-shadow: 1px 1px 0px rgba(238, 238, 238, 0.5);
+}
+h3, .h3 {
+	.font-size(16px);
+}
+h4, .h4 {
+	.font-size(14px);
+}
+h5, .h5 {
+	.font-size(13px);
+}
+h6, .h6 {
+	.font-size(12px);
+}
+
+/** THE BASICS
+-------------------------------------------------------------- */
+p {
+	.font-size(14px);
+	text-align: justify; 
+	.padding-top(5px);
+	margin: 0;
+}
+ul, ol, table, dl {}
+ul, ol {
+	list-style: none;	
+			
+
+	li {
+	}
+}
+ul {
+	
+	li {}
+}
+ol {
+	list-style: decimal outside;
+	
+	li {}
+}
+ul ul { margin-bottom: 0; }
+ol ol { margin-bottom: 0; }
+ol ul { margin-bottom: 0; }
+ul ol { margin-bottom: 0; }
+blockquote {
+	
+	.padding(24px);
+	font-style: italic;	
+	
+	&:before {}
+	p:last-child {
+		margin-bottom: 0;
+	}
+}
+table {
+	border-bottom: 1px solid #EDEDED;
+	color: #757575;
+	.font-size(12px);
+	
+	width: 100%;
+	
+	caption {
+		.font-size(16px);
+		.margin(24px, 0);
+		font-weight: normal;
+		text-align: left;			
+	}
+	tr {
+	
+		th {
+			.font-size(11px);
+			font-weight: bold;
+			text-transform: uppercase;
+			color: #636363;
+			text-align: left;
+		}
+		td {
+			border-top: 1px solid #EDEDED;
+			.padding-top(6px);
+			.padding-right(10px);
+			.padding-bottom(6px);
+			.padding-left(0);
+			font-weight: normal;
+			text-align: left;
+		}
+		.even {}
+		.odd{}
+	}
+}
+dl {
+	.margin(0, 24px);
+	
+	dt {
+		font-weight: bold;
+	}
+	dd {
+		
+	}
+}
+img {
+	max-width: 100%;
+	height: auto;
+}
+/*
+image alignment on a screen this size may be
+a bit difficult. It's set to start aligning
+and floating images at the next breakpoint,
+but it's up to you. Feel free to change it up.
+*/
+.alignleft, img.alignleft {
+	.margin(12px, 24px);
+	.margin-bottom(0);
+}
+.alignright, img.alignright {
+	.margin(12px, 24px);
+	.margin-top(0);
+}
+.aligncenter, img.aligncenter {
+	.margin(12px, 0);
+}
+/* Make sure videos and embeds fit their containers */
+embed, iframe,
+video, object {
+	max-width: 100%;
+	height: auto;
+	
+}
+code {
+	font-family: Consolas, Monaco, Lucida Console, monospace;
+	.font-size(12px);
+}
+del {
+	color: #333;
+}
+hr {
+	background-color: #ccc;
+	border: 0;
+	.margin(4px, 8px);
+}
+pre {
+	border: 1px solid #ededed;
+	color: #666;
+	font-family: Consolas, Monaco, Lucida Console, monospace;
+	.font-size(12px);
+	.margin(24px, 0);
+	overflow: auto;
+	.padding(24px);
+
+	code { display: block; }
+}
+address {
+	display: block;
+}	
+ins {
+	background: #FFF9C0;
+	text-decoration: none;
+}	
+abbr,
+dfn,
+acronym {
+	border-bottom: 1px dotted #666;
+	cursor: help;
+}
+
+
+/******************************************************************
+HEADER & NAVIGATION
+******************************************************************/
+
+/** Site Header
+-------------------------------------------------------------- */
+/** 
+header#masthead .site-header
+	.inner-header
+		.site-branding
+			.logo
+				a
+					img
+		.big_banner
+			.header-login
+				a
+		nav#site-navigation .main-navigation	
+-------------------------------------------------------------- */
+.site-header {
+
+	.inner-header {
+		height: 100%;
+	}
+}	
+.site-branding {
+	display: none;
+		
+	a {			
+		img {}
+	}		
+	.big_banner {
+		.header-login {
+			color: @white;
+			
+			a {}
+		}		
+	}
+}	
+
+/** Navigation
+-------------------------------------------------------------- */
+/*
+header#masthead .site-header
+	.inner-header
+		.site-branding
+		nav#site-naviagtion .main-navigation
+			.logo
+			.menu-toggle
+			.asssitive-text
+			ul .nav-menu
+				li.page-item
+					a
+-------------------------------------------------------------- */
+.main-navigation {
+	text-align: left;
+	background: @sec-color;	
+	overflow: hidden;
+	
+	.logo {
+		float: left;
+		display: inline;
+		float: left;
+		padding: 0;
+		.height(40px);	 	
+		//background: url(../images/logo_mobile_trans_240.png) no-repeat;		
+		.width(240px);
+		
+		div {
+		.logo_mobile_trans_240_sprite;
+		padding-top: 17.083%;
+		width: 204.16%;
+		background-size: cover;		
+			a {
+				img {}
+			}
+		}
+	}
+	.menu-toggle {
+		float: right;
+		margin: 0;
+		.margin-right(10px);
+		.margin-top(5px);
+		clear: none;
+	}
+	.assistive-text {
+		position: absolute !important;
+		clip: rect(1px, 1px, 1px, 1px);
+		
+		&:hover,
+		&:active,
+		&:focus {
+			background: #fff;
+			border: 2px solid #333;
+			.border-radius(3px);
+			clip: auto !important;
+			color: @black;
+			display: block;
+			.font-size(12px);
+			.padding(12px);
+			position: absolute;
+			.top(5px);
+			.left(5px);
+			z-index: 100000; /* Above WP toolbar */
+		}		
+	}
+} /* end .main-navigation */
+ul.nav-menu {
+	display: none;
+	
+	&.toggled-on {
+		display: block;
+		.margin-top(40px);
+		border-top: 1px solid @black;
+		
+		li {
+			.font-size(16px);
+			font-family: @serif;
+			a {
+				color: @white;
+			}
+		}
+	}
+	
+	li {
+		.margin-top(24px);
+		.font-size(12px);
+		list-style-type: none;
+		text-align: left;
+		
+		a {
+			color: @black;
+		}
+		&:first-child {}
+		&:last-child {}
+		
+		/** Second Level **/
+		ul.sub-menu,
+		ul.children {
+			li {
+				a {
+					.padding-left(30px);
+					&:hover,
+					&:focus {}
+					&:link {}
+				}
+				&:first-child {}
+				&:last-child {}
+			} //end .sub-menu li 
+		} //end .sub-menu ul 
+	} //end .nav-menu li 
+	
+	/* highlight current page */
+	li.current-menu-item,
+	li.current_page_item,
+	li.current_page_ancestor {
+		a {}
+	}  // end current highlighters		
+} // end .nav-menu ul
+
+/** Social Navigation
+-------------------------------------------------------------- */
+#menu-social {
+	.margin-top(45px);
+	
+	ul {
+	.width(290px);
+		list-style: none;
+		text-align: right;
+		color: #fff;
+		background: #685;
+		padding: 5px;
+		border-radius: 5px;
+		text-shadow: 1px 1px 1px black;
+		box-shadow: 0 1px 0 rgba(220, 226, 219, 0.25), 0 -1px 0 rgba(18, 27, 9, 0.25);
+		float: right;
+
+		li {
+			display:  inline-block;
+			position: relative;
+			.margin-top(3px);
+
+			
+			a::after {
+				content:        '\f408';
+				display:        inline-block;
+				padding:        0 5px;
+				font-family:    'Genericons';
+				font-size: 24px;
+				color: @white;
+				vertical-align: top;
+
+				-webkit-font-smoothing: antialiased;
+			}
+			a[href*="facebook.com"]::after {
+				content: '\f203';
+				color:   #fff;
+			}
+			a[href*="plus.google.com"]::after {
+				content: '\f206';
+				color: #fff;
+			}
+			a {
+				text-decoration: none;
+				
+				span {
+					color: #fff;
+					font-weight: bold;
+					font-family: 'open sans condensed';
+					font-size: 16px;
+					text-decoration: none;				
+				}
+			}
+		}
+	}
+}
+
+/******************************************************************
+POSTS & CONTENT STYLES
+******************************************************************/
+.hentry {
+	clear: both;
+	header {}
+	footer {}
+	/*
+	img {
+		.margin-bottom(16px);
+		.border-radius(3px);
+		box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+	}	
+	*/
+} /* end .hentry */
+
+/* post meta
+-------------------------------------------------------------- */
+.byline {
+	color: #999;
+	time {}
+}
+
+/** Entry Header
+-------------------------------------------------------------- */
+.entry-header {
+	
+}
+
+/** Entry Title
+-------------------------------------------------------------- */
+.entry-title {
+	.font-size(20px);
+	font-weight: normal;
+	
+	a {
+		text-decoration: none;
+	}
+}
+
+/** Entry Thumbnail
+-------------------------------------------------------------- */
+.entry-thumbnail {
+	float: left;
+	.padding-right(10px);
+}
+
+/** Entry Meta 
+-------------------------------------------------------------- */
+.entry-meta {
+	clear: both;
+	
+	.date {}
+	.categories-links {}
+	.tag-links {}
+	.author {}
+	.edit-link {} 
+	a {
+		color: @grey;
+	}
+}	
+
+/** Entry Format
+-------------------------------------------------------------- */
+.entry-format {
+	.margin-top(24px);
+	font-weight: normal;
+}
+.comments-link {
+	.margin-top(24px);
+	.font-size(13px);
+	color: @grey;
+	
+	a {
+		color: @grey;
+	}
+}
+
+/** Entry content 
+-------------------------------------------------------------- */
+.entry-content {} /* end .entry-content */
+
+.wp-caption {
+	max-width: 100%;
+	background: #eee;
+	.padding(5px);
+	
+	img {
+		max-width: 100%;
+		margin-bottom: 0;
+		width: 100%;
+	}
+	p.wp-caption-text {
+		.font-size(14px);
+		.margin(4px, 0);
+		.margin-bottom(7px);
+		text-align: center;
+	}
+} /* end .wp-caption */
+
+/** Galleries 
+-------------------------------------------------------------- */
+.gallery {
+	dl {
+		a {}
+		img {}
+	}
+	dt {}
+	dd {}
+} /* end .gallery */
+
+/* gallery caption styles */
+.gallery-caption {}
+.size-full {}
+.size-large {}
+.size-medium {}
+.size-thumbnail {}
+ 
+/** Attachments 
+-------------------------------------------------------------- */
+article.attachment {
+	overflow: hidden;
+	
+	.image-attachment div.attachment {
+		text-align: center;
+		
+		p {
+			text-align: center;
+		}
+		img {
+			display: block;
+			height: auto;
+			.margin(0, auto);
+			max-width: 100%;
+		}
+	}	
+	.image-attachment .entry-caption {
+		.margin-top(8px);
+	}
+}	
+
+/** Paging Navigation 
+-------------------------------------------------------------- */
+.site-content nav {
+	clear: both;
+	overflow: hidden;
+}
+#nav-above {
+	.padding(24px, 0);
+	display: none;
+}
+.paged #nav-above {
+	display: block;
+}
+.nav-previous,
+.previous-image {
+	float: left;
+	width: 50%;
+}
+.nav-next,
+.next-image {
+	float: right;
+	text-align: right;
+	width: 50%;
+}
+#comment-nav-above {
+	.margin(48px, 0);
+}
+
+/******************************************************************
+STANDARD PAGES
+******************************************************************/
+
+/** Starter Pages
+-------------------------------------------------------------- */
+/** Taxonomy Navigation **/
+.starter_tax_nav, .starter_tax_nav_mobile {
+	.dropdown_section:nth-of-type(1) {
+	}
+	.dropdown_section:nth-of-type(2) {
+	}	
+}
+.starter_map {
+	div {
+		/*background: url(../images/us_map_green_trans.png) no-repeat; */
+
+		.us_map_green_trans;
+		padding-top: 73%;
+		width: 100%;
+		background-size: cover;
+		}
+	img {
+		margin: 0 auto 0;
+		display: block;
+	}
+}
+.calltoaction{ 
+	display: none;
+	div {
+		display: none;
+	}
+}
+.starter_blogs {
+	h2 {
+		.green-button;
+		.font-size(18px);
+		text-shadow: none;
+	}
+	img {
+		.padding(3px);
+		background: @white;
+		display: block;
+		margin: 0 auto 0;
+		.margin-bottom(5px);
+	} 
+}
+.starter_reviews {
+	display: none;
+}
+
+/** Listing Pages
+-------------------------------------------------------------- */
+.tax_nav {
+	.dropdown_section:nth-of-type(1) {
+		.margin-top(20px);
+	}
+	.dropdown_section:nth-of-type(2) {
+		.margin-top(20px);
+	}	
+}
+.list {
+	clear: both;
+	.margin-bottom(20px);
+	
+	h2 {}
+	ul {
+		margin: 0;
+		padding: 0;
+		.height(150px);
+		overflow-y: scroll;
+		
+		li {
+			
+			h3 {
+				background: @sec-color;
+				.margin-top(10px);
+				.margin-bottom(5px);
+				.margin-right(5px);
+				.padding(5px, 10px);
+			}
+		}
+	}	
+}
+.listing_map {
+	text-align: center;
+
+	& > p {
+		text-align: center;
+		padding: 0;
+		.margin-top(-10px);
+	}
+	#map { 
+		border: solid 2px #DDD; 
+		.height(300px); 
+		width: 100%;
+	}	
+}
+
+.listing_featured_parks {
+	display: none;
+}
+.listing_blogs {
+	display: none;
+}
+
+.listing_reviews {
+	display: none;
+}
+.no_overnight, .free_dump {
+	.margin-right(5px);
+}
+.nothing_found {
+	clear: both;
+	
+	h2 {
+		text-align: center;
+	}
+}
+
+/** Single Pages
+-------------------------------------------------------------- */
+#basicinfo { 
+	h1 { 
+		padding-bottom: 0; 
+	}
+	address {
+		clear: both;
+	}
+	p { 
+		font-style: normal;
+		padding: 0;
+	}
+} 
+
+/* Featured Park Section */
+#rvpark_featured_parks { 
+	display: none;
+}
+
+/* Mobile Ad */
+.mobile_ad {
+	
+}
+
+/* Photo Gallery or Ad*/
+#photo_gallery_or_ad {
+	//display: none;
+}
+
+/**  MAP  **/
+.map_wrapper {
+}
+
+/**  DESCRIPTION OR NEARBY  **/
+.description_or_nearby {
+	display: none;
+	
+	h2 {}
+	.nearby {}
+}
+
+/** Single Pages for RV Parks
+-------------------------------------------------------------- */
+.type {
+	font-weight: bold; 
+	color: #342;
+}
+.ratings_mobile {
+	#ratings {
+		
+		img {
+			box-shadow: none;
+			margin: 0;
+		}
+	}
+	.rating {
+		float: left;
+		.margin(0, 5px);
+	}
+}
+.ratings_section {
+	display: none;
+}
+.ratings_text_none {
+	display: none;
+}
+.review_button {
+	display: none;
+}
+
+/** Ad Area **/
+.ad_area_aside {
+	display: none;
+}
+/** Photo Gallery **/
+.photo_gallery {
+	.width(300px);
+	margin: 0 auto 0;
+
+	.slideshow-wrapper {}
+	.portfolio-slideshow { 
+		img {}
+		.slideshow-content {
+			margin: 0;
+		}
+	}
+	#scrollable {}
+	a.next.browse.right {}
+	.pscarousel {}
+	a.prev.browse.left.disabled, a.next.browse.right.disabled {}
+}
+#fancybox-title {}
+
+/**  ADVERT  **/
+#rvty_advert {
+	display: none;
+}
+
+/**  DETAILS  **/
+#details_wrap {
+	.padding-top(10px);
+	color: #222;
+	clear: both;
+	
+	ul {
+		.padding-left(10px);
+		margin: 0px;
+	}
+	h2{
+		margin-top: 0;
+		color: #121;
+		text-shadow: 1px 1px 0px rgba(148, 148, 148, 0.5);
+		background: @sec-color;
+		.padding(0, 10px);
+		}
+	h3 {
+		.padding-top(5px); 
+		padding-bottom: 0;
+		clear: both;
+		margin: 0;
+	}
+	.site_details, .rate_details, .park_details, .club_details {
+		.margin-bottom(10px);
+	}
+}
+.site_num {
+	h3 {
+		float: left;
+		.padding-right(5px);
+	}
+	p {
+		.padding-top(7px);
+		margin: 0;
+	}
+}
+div.hookups, div.accommodations, div.other_camping {
+	width: 49%;
+	float: left;
+}
+div.hookups {
+	clear: both;
+}
+div.other_camping {}
+div.rates, div.rates_charges, div.payments {
+	width: 49%;
+	float: left;
+}
+div.rates {}
+div.payments {}
+div.discounts {
+	clear: both;
+	
+	h3 {
+		float: left;
+		.padding-right(5px);
+	}
+	ul {
+		.padding-top(5px);
+		margin: 0;
+		
+		li {
+			float: left;
+			padding-right: 20px;
+		}
+	}
+}
+div.features, div.activities, div.atmospheres {
+	li {
+		display: inline;
+		float: left;
+		width: 49%;
+	}
+}
+.dates {
+	h3 {
+		float: left;
+		.padding-right(5px);
+	}
+	p {
+		.padding-top(7px);
+		margin: 0;
+	}
+}
+.club_details {
+	h3 {
+		.padding-bottom(5px);
+	}
+	ul.clubs {
+		padding: 0 !important;
+		.margin-top(10px) !important;
+		
+		li {
+			width: 23%;
+			float: left;
+			display: inline;
+			.margin(0, 5px);
+		}
+	}
+}
+
+/**  REVIEWS AND BLOGS  
+**********************************************************/
+#review_box {
+	clear: both;
+	.padding-top(20px);
+}
+#rvblogs {
+	display: none;
+}
+
+/** REVIEWS **/
+#review_box {
+	& > h2 {
+		.green-button;
+		font-family: @sans-serif;
+		text-shadow: none;
+	}
+	p.comment-form-comment label {
+		display: none;
+	}
+}
+
+/** RV BLOGS **/
+
+
+/** Single Pages for RV Boondocks
+--------------------------------------------------------------*/
+/** ADDITIONAL INFO **/
+.single-rvboons {
+	.ratings_mobile {
+		display: none;
+	}
+	.additional_info {
+		text-align: center;
+		.padding-bottom(5px);
+		.green-button;
+		border: none;
+		box-shadow: none;
+		
+		h2 {
+			display: inline;
+			.margin-right(5px);
+		}
+		p {
+			display: inline;
+			.h2;	
+		}
+	}
+}
+
+/** NEARBY BOONS **/
+.single-rvboons, .single-rvdumps {
+	.description_or_nearby {}
+	#review_box {
+		
+		textarea#comment[style] {
+			.width(400px);
+		}
+		.comment_wrap .comment-meta .comment_col1 {
+			.margin-bottom(5px);
+		}
+	}
+	#rvblogs {}
+}
+/** Single Pages for RV Dumps
+--------------------------------------------------------------*/
+.single-rvdumps {
+	.ratings_mobile {
+		display: none;
+	}
+	.additional_info {
+		h2 {
+			.font-size(16px);
+			text-align: left;
+			padding: 0;
+		}
+		div {
+			text-align: left;
+			
+			span {}
+			ul {
+				padding: 0;
+				margin: 0;
+				
+				li {
+					display: inline;
+					.padding(0, 4px);
+				}
+			}
+		}
+		.ul span {
+			float: left;
+		}
+	}
+}
+
+/******************************************************************
+BLOG STYLES
+******************************************************************/
+.blog, .single-post, .archive, .search {
+	.blog404,
+	.content-area {
+	}
+	.post {
+		
+		footer {
+		}
+	}
+	header {
+	}
+	.author { 
+		width: 50%;
+		display: block;
+		float: left;
+		
+	}	
+	.categories { 
+		width: 50%; 
+		display: block;
+		float: right;
+		text-align: right;
+	}
+}
+	
+/* Blog Archive
+********************************************/
+.blog, .archive, .blog404, .search {
+	.entry-summary {
+		clear: both;
+		
+		.entry-thumbnail {
+			float: none;
+			
+			img {
+				background: @white;
+				.padding(3px);
+				margin: 0 auto 0;
+				display: block;
+			}
+		}
+		.entry {
+			.min-height(104px);
+			overflow: hidden;
+			display: block;
+			
+			p {
+				padding: 0;
+			}		
+		}
+		.read-more {
+			.green-button;
+			text-align: right;
+			.width(100%);
+			.padding(1px, 10px);
+			clear: both;
+			display: block;
+		}			
+	}
+	.navigation-paging {
+		.screen-reader-text {
+			display: none;
+		}	
+	}		
+}
+
+/* Blog Single Post
+********************************************/
+.single-post {
+	.orig_source {
+		clear: both;
+		.margin-top(10px);
+		
+		a {
+			.green-button;
+			font-family: @sans-serif;
+			width: 100%;
+			display: block;
+		}
+	}
+	.navigation-post {
+		.margin-top(10px);
+		
+		.screen-reader-text {
+			display: none;
+		}			
+	}
+	
+	/** Floating Social Bar **/
+	#fsb-social-bar .fsb-title {}
+	.blog_ad {
+		clear: both;
+		text-align: center;
+	}
+	footer {}
+}
+
+/** Advertise Page
+-------------------------------------------------------------*/
+.park_modules {
+	border: 2px solid @black;
+	.border-radius(5px);
+	.margin-bottom(20px);
+	overflow: hidden;
+	background: @sec-color;
+
+	p {
+		.padding(10px, 20px);
+	}
+	.description {
+		background-color: @white;
+		.padding-bottom(75px);
+		.margin-bottom(-75px);			
+		.padding-top(20px);
+		.margin-top(-20px);		
+		
+		ul { 
+			.padding-left(20px);
+			
+			ul {
+				list-style: disc;
+				.padding-left(20px);		
+			}
+		}
+	}
+	.listing_cost {
+		background: @sec-color;
+		
+		h2 {
+			text-align: center;
+		}
+		.add_camp_button {
+			.main-button;
+			
+			a {
+				font: bold 16px 'Open Sans Condensed';
+				.padding-top(10px);
+				width: 100%;
+				float: left;
+				text-align: center;
+				color: green;
+				text-decoration: none;	
+				display: block;	
+			}			
+		}	
+		.special {
+			color: #632;
+			font: bold 16px 'Open Sans Condensed';
+		}		
+	}
+}
+
+/** Add and Claim Park Pages
+-------------------------------------------------------------*/
+#addpark_wrap {
+
+	#rvty_account_info {
+		.padding-top(5px);
+	}
+	.addpark_col_1 {}
+	.addpark_col_2 {}	
+	label {}
+	span.wpcf7-form-control-wrap {
+		
+		input {
+			width: 100%;
+		}
+	}
+	br { 
+		display: none; 
+	}
+	h3 {	
+		.padding-top(5px);
+		clear: both;
+	}
+	hr {
+		margin: 0; 
+		.margin-top(5px);
+	}
+	#addpark_submit {
+		clear: both
+	}
+}
+
+/** Add Your RV Blog Page
+-------------------------------------------------------------*/
+.add_your_blog {
+	.content-area {}
+	.widget-area {
+		display: block;
+	}
+}
+.badges {
+	h2 {
+		text-align: center;
+	}
+	img {
+		margin: 0 auto 0;
+		display: block;
+	}
+	p {
+		.margin-bottom(20px);
+		text-align: center;
+		
+		span {
+			word-break: break-all;
+			background-color: #999;
+			display: block;
+			.padding(5px);
+			border: 1px solid @white;
+			.border-radius(5px);
+		}
+	}
+}
+	
+
+/** Search Results
+-------------------------------------------------------------- */
+.search {}                       	 /* search page */
+.search-results {}           	  	 /* search result page */
+.search-no-results {}         		 /* no results search page */
+.search-paged-1 {}            		 /* individual paged search (i.e. body.search-paged-3) */
+	
+/** 404
+-------------------------------------------------------------- */
+.error404 {
+	.entry-title {
+		background-color: #632;
+		.border-radius(5px);
+		text-align: center;	
+		.padding-top(3px);
+		.margin-top(20px);
+		color: @white;
+		text-shadow: none;
+		.margin-bottom(10px);
+	}
+} 
+
+/** Everything Else
+-------------------------------------------------------------- */
+.rtl {}                           /* for sites that are read right to left (i.e. hebrew) */
+.home {}                          /* home page */
+.blog {}                          /* blog template page */
+
+.date {}                          /* date archive page */
+	.date-paged-1 {}                /* replace the number to the corresponding page number */
+.attachment {}                    /* attatchment page */
+	.attachmentid-1 {}              /* individual attatchment page (i.e. body.attachmentid-763) */
+	.attachment-mime-type {}        /* style mime type pages */
+.author {}                        /* author page */
+	.author-nicename {}             /* user nicename (i.e. body.author-samueladams) */
+	.author-paged-1 {}              /* paged author archives (i.e. body.author-paged-4) for page 4 */
+.category {}                      /* category page */
+	.category-1 {}                  /* individual category page (i.e. body.category-6) */
+	.category-paged-1 {}            /* replace the number to the corresponding page number */
+.tag {}                           /* tag page */
+	.tag-slug {}                    /* individual tag page (i.e. body.tag-news) */
+	.tag-paged-1 {}                 /* replace the number to the corresponding page number */
+.page-template {}                 /* custom page template page */
+	.page-template-page-php {}      /* individual page template (i.e. body.page-template-contact-php */
+	.page-paged-1 {}                /* replace the number to the corresponding page number */
+	.page-parent {}                 /* parent page template */
+	.page-child {}                  /* child page template */
+	.parent-pageid-1 {}             /* replace the number to the corresponding page number */
+.logged-in {}                     /* if user is logged in */
+.paged {}                         /* paged items like search results or archives */
+	.paged-1 {}                     /* individual paged (i.e. body.paged-3) */
+	
+
+/****************************************************************
+COMMENTS
+****************************************************************/
+
+/*================================================================
+#review_box
+	.comments-area
+		.comments-title
+		.comment-respond // the form
+		.commentlist // the list of comments
+================================================================*/
+
+.comments-area {
+	clear: both;
+	
+	.comments-title {
+		.font-size(16px);
+		.h3;
+		
+		span {}
+	}
+	
+/** COMMENT FORM 
+-----------------------------------------------------------------*/
+	.comment-respond {
+		.comment-reply-title {		
+			#cancel-comment-reply-link {}
+		}
+		.comment-form {
+			p {}
+			.must-log-in , .logged-in-as { 
+				clear: both; 
+			}
+			
+			/* Comment Form */
+			.comment-form-comment {
+				width: 70%;
+				float: left;
+				
+				label {
+					display: block;
+					.h3;
+				}
+				input[type=text],
+				input[type=email],
+				input[type=url],
+				textarea {
+					width: 100%; 
+					
+					-webkit-transition: all 0.30s ease-in-out;
+					-moz-transition: all 0.30s ease-in-out;
+					-ms-transition: all 0.30s ease-in-out;
+					-o-transition: all 0.30s ease-in-out;
+					outline: none;
+					padding: 3px 0px 3px 3px;
+					margin: 5px 1px 3px 0px;
+					border: 1px solid #DDDDDD;
+					
+					&:focus {
+						box-shadow: 0 0 5px rgba(102, 136, 85, 1);
+						margin: 5px 1px 3px 0px;
+						border: 1px solid rgba(102, 136, 85, 1);
+					}
+					
+					/* form validation */
+					&:invalid {
+						outline: none;
+						border-color: #fbc2c4;
+						background-color: #f6e7eb;
+						-webkit-box-shadow: none;
+							 -moz-box-shadow: none;
+								-ms-box-shadow: none;
+								box-shadow: none;
+					}
+				}	
+				textarea {
+					.height(150px);
+				}			
+			} // .comment-form-comment
+			
+			/** Star Ratings Section **/
+			#rating_box {
+				width: 28%;
+				float: left;
+				.margin-top(40px);
+				.margin-left(2%);
+				
+				p {
+					label {}
+					input[type=radio] {
+						float: left;
+						.height(20px);
+						clear: both;				
+					}
+					.rating_star {}				
+				}
+			}
+			.review_policy {
+				clear: both;
+				
+					a {}
+			}
+			.form-submit {}
+		} // end .comment-form
+	} // .comment-respond
+
+		
+/** COMMENT LIST 
+-----------------------------------------------------------------*/
+/*=================================================================
+	.commentlist
+		.comment_wrap
+			.comment_col1
+			.comment_col2
+			.comment_text_wrap
+		.reply
+==================================================================*/		
+	.commentlist {
+		padding: 0;
+		list-style: none;
+		
+		article {
+			.margin(24px, 0);
+
+/** RV PARK REVIEW
+-----------------------------------------------------------------*/			
+			.reply {
+				display: none;
+			}		
+		} // end article - rv park review
+		
+/** RV PARK RESPONSE
+-----------------------------------------------------------------*/
+		.children {
+			list-style: none;
+			padding: 0;
+			
+				article {
+				/*
+				width: 100%; 
+				margin: -15px auto 0;*/
+				
+				.comment_wrap {
+					background: #EDA;
+					border-radius: 0px 0px 5px 5px;
+					.padding(5px, 10px);
+					.margin-top(-30px);
+					
+						.comment_col1 {
+							margin-bottom: 0;
+							width: 100%;
+						}
+				}
+				h2 {
+					color: #444;
+					text-shadow: 1px 1px 0px rgba(238, 238, 238, 0.5);
+				}
+			}
+		}	
+	} // end .commentlist
+} // end .comments-area
+
+/******************************************************************
+SIDEBARS & ASIDES
+******************************************************************/
+.widget-area {
+	display: none;
+	
+	.widget {
+
+		.widget-title {}
+	}
+	#s {
+	}
+}
+
+/******************************************************************
+FOOTER STYLES
+******************************************************************/
+.site-footer {
+	overflow: hidden;
+	background: @sec-bg;
+	
+	.footer_wrap {
+	
+		ul.nav-menu {
+			display: block; 
+			padding: 0;
+			margin: 0;
+			
+			li {
+				display: none;
+				margin: 0;
+				
+				&.menu-item-94324 { // add-your-rv-park
+					display: block;
+					text-align: center;
+					.font-size(16px);
+					font-weight: bold;
+					font-family: @sans-serif;
+					.padding(5px);	
+						
+					a {
+						color: #fff;
+					}
+				}
+			}
+		}
+	}
+}

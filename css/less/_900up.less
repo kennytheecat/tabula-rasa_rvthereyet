@@ -1,0 +1,116 @@
+.starter_blogs {
+	.column(6);
+	.first;
+	clear: both; 
+	
+	h2 {
+		.font-size(20px);	
+	}
+	img {
+		float: left;
+		.margin-right(10px); 
+		display: inline;
+	}
+}
+.starter_reviews {
+	.column(6);
+	.last;
+}
+
+/** Listing Pages
+-------------------------------------------------------------- */
+.list {
+	.column(3);
+	.first;
+}
+.listing_map {
+	.column(5.5);
+	.margin-bottom(20px);
+}
+.listing_blogs {
+	.column(3.5);
+	.last;
+	
+	img {
+		.padding(3px);
+		background: @white;
+		display: block;
+		margin: 0 auto 0;
+		.margin-bottom(5px);
+	} 	
+}
+.listing_featured_parks {
+	.column(3.5);
+	.last;	
+	
+	.shadow-left, 
+	.shadow-right {
+		display: none;
+	}
+}
+
+/** Floating Social Bar **/
+.admin-bar #fsb-social-bar.fsb-fixed {}
+.float_share {
+	#fsb-social-bar {
+		&.fsb-fixed {}
+		.fsb-title {
+			.padding-left(160px) !important;
+		}
+		.fsb-share-twitter {}		
+		.fsb-share-pinterest {}		
+	}
+}
+#photo_gallery_or_ad {
+	.column(4.5);
+	.first;
+	clear: both;
+}
+/**  MAP  **/
+.map_wrapper {
+	.column(7.5);
+	.last;
+}
+
+/******************************************************************
+BLOG STYLES
+******************************************************************/
+.blog, .single-post, .archive, .search  {
+	.blog404,
+	.content-area {
+		.column(7);
+		.first;
+		
+		.entry-thumbnail {
+			.column(5);
+			.first;	
+			.margin-bottom(5px);			
+			
+			img {
+				margin: 0;
+			}
+		}
+		.entry {
+			.column(7);
+			.last;
+			.max-height(124px);
+		}		
+	}
+	.widget-area {
+		.column(5);
+		.last;
+	}
+}
+.single-post {
+	#fsb-social-bar {
+		.fsb-title {
+			.padding-left(0px) !important;
+		}
+		.fsb-share-twitter {
+			display: inline;
+		}
+		.fsb-share-pinterest {
+			display: none;
+		}		
+	}
+}
