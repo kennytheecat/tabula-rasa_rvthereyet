@@ -30,11 +30,11 @@
 	global $status; 
 	if ( $status > 2 ) { ?>
 		<script type='text/javascript'>/* <![CDATA[ */ var portfolioSlideshowOptions = { psFancyBox:true, psHash:false, psThumbSize:'75', psFluid:false, psTouchSwipe:true, psKeyboardNav:true, psBackgroundImages:false, psInfoTxt:'of' };/* ]]> */</script>
-		<script type='text/javascript' src='http://localhost/rvthereyetdirectory.com/wp-content/plugins/portfolio-slideshow-pro/js/scrollable.min.js'></script>
-		<script type='text/javascript' src='http://localhost/rvthereyetdirectory.com/wp-content/plugins/portfolio-slideshow-pro/js/portfolio-slideshow.min.js'></script>
-		<script type='text/javascript' src='http://localhost/rvthereyetdirectory.com/wp-content/plugins/portfolio-slideshow-pro/js/fancybox/jquery.fancybox-1.3.4.pack.js'></script>
-		<script type='text/javascript' src='http://localhost/rvthereyetdirectory.com/wp-content/plugins/portfolio-slideshow-pro/js/code.photoswipe.jquery-3.0.4.min.js'></script>
-		<script type='text/javascript' src='http://localhost/rvthereyetdirectory.com/wp-content/plugins/portfolio-slideshow-pro/js/jquery.cycle.all.min.js'></script>
+		<script type='text/javascript' src='<?php echo home_url(); ?>/wp-content/plugins/portfolio-slideshow-pro/js/scrollable.min.js'></script>
+		<script type='text/javascript' src='<?php echo home_url(); ?>/wp-content/plugins/portfolio-slideshow-pro/js/portfolio-slideshow.min.js'></script>
+		<script type='text/javascript' src='<?php echo home_url(); ?>/wp-content/plugins/portfolio-slideshow-pro/js/fancybox/jquery.fancybox-1.3.4.pack.js'></script>
+		<script type='text/javascript' src='<?php echo home_url(); ?>/wp-content/plugins/portfolio-slideshow-pro/js/code.photoswipe.jquery-3.0.4.min.js'></script>
+		<script type='text/javascript' src='<?php echo home_url(); ?>/wp-content/plugins/portfolio-slideshow-pro/js/jquery.cycle.all.min.js'></script>
 		<!--<script type='text/javascript' src='<?php echo get_stylesheet_directory_uri(); ?>/js/portfolio-gallery.js'></script>-->
 		<!--
 
